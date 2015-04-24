@@ -38,12 +38,12 @@
 
 			?>
 	 		</div>
-	 		<hr>
+	 		<div class="ingresarBoton">
 	 		<?php
 			echo form_submit('ingresar', 'Inicar sesión','class="submit-input"');
 			echo form_close();
 			echo anchor('/recuperar_password', '¿No puede acceder a su cuenta?', array('class' => 'recuperar-contrasena', 'title' => 'Recuperar contraseña'));
 			?>
-			
+			</div>
 	</section>
 </div>
