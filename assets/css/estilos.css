@@ -852,6 +852,10 @@ footer{
   background-color: green !important; 
 }
 
+.navuser p{
+  color: #FF0000;
+} 
+
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
 .contenedor{
