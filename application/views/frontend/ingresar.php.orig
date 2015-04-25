@@ -1,4 +1,8 @@
-<div class="contenedor logn">
+<<<<<<< HEAD
+<div class="contenedor">
+=======
+<div class="contenedor users">
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
 	<section id="ingresar">
 		<h2>Ingresar</h2>
 			<?php
@@ -38,12 +42,20 @@
 
 			?>
 	 		</div>
+<<<<<<< HEAD
+	 		<hr>
+=======
 	 		<div class="ingresarBoton">
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
 	 		<?php
 			echo form_submit('ingresar', 'Inicar sesión','class="submit-input"');
 			echo form_close();
 			echo anchor('/recuperar_password', '¿No puede acceder a su cuenta?', array('class' => 'recuperar-contrasena', 'title' => 'Recuperar contraseña'));
 			?>
+<<<<<<< HEAD
+			
+=======
 			</div>
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
 	</section>
 </div>

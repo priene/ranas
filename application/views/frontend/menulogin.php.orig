@@ -1,0 +1,82 @@
+<<<<<<< HEAD
+<div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<ul>
+		<li class="panel col-lg-4 col-md-4">
+			<div class="row panaelnoconfirmados panelheader">
+				<div class="text-right">
+=======
+<div class="dashboard col-lg-10 col-md-10 col-sm-10 col-xs-10">
+	<ul>
+		<li class="panel col-lg-3 col-md-3">
+			<div class="row panaelnoconfirmados panelheader">
+				<div class="col-lg-3 col-md-3"></div>
+				<div class="col-lg-9 col-md-9 text-right">
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+					<div class="numeropanel"><?= $noconfirmados ?></div>
+					<div>Bandas sin confirmar</div>
+				</div>
+			</div>
+			<div class="panelfooter">
+<<<<<<< HEAD
+				<a href="<?= site_url('confirmarbandas') ?>" class="definirbandas text-left">Confirmar Bandas</a>
+			</div>
+		</li>
+		<li class="panel col-lg-4 col-md-4">
+			<div class="row panelnoturno panelheader">
+				<div class="text-right">
+=======
+				<a href="confirmarbandas" class="definirbandas text-left">Confirmar Bandas</a>
+			</div>
+		</li>
+		<li class="panel col-lg-3 col-md-3">
+			<div class="row panelnoturno panelheader">
+				<div class="col-lg-3 col-md-3"></div>
+				<div class="col-lg-9 col-md-9 text-right">
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+					<div class="numeropanel"><?= $noturno ?></div>
+					<div>Bandas sin turno</div>
+				</div>
+			</div>
+			<div class="panelfooter">
+<<<<<<< HEAD
+				<a href="<?= site_url('definirturnos') ?>" class="definirbandas">Definir turno</a>
+			</div>
+		</li>
+		<li class="panel col-lg-4 col-md-4">
+			<div class="row panelnoconvocatoria panelheader">
+				<div class="text-right">
+=======
+				<a href="definirturnos" class="definirbandas">Definir turno</a>
+			</div>
+		</li>
+		<li class="panel col-lg-3 col-md-3">
+			<div class="row panelnoconvocatoria panelheader">
+				<div class="col-lg-3 col-md-3"></div>
+				<div class="col-lg-9 col-md-9 text-right">
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+					<div class="numeropanel"><?= $noconvocatoria ?></div>
+					<div>Bandas sin convocatoria</div>
+				</div>
+			</div>
+			<div class="panelfooter">
+<<<<<<< HEAD
+				<a href="<?= site_url('definirconvocatorias') ?>" class="definirbandas text-left">Definir convocatoria</a>
+			</div>
+		</li>
+	</ul>
+	
+	<div class="graficos" style="clear:both;">
+		<div id="grafico1" class="chart col-lg-6 col-md-6"></div>
+		<div id="grafico2" class="chart col-lg-6 col-md-6"></div>
+		<div id="grafico3" class="chart col-lg-6 col-md-6"></div>
+		<div id="grafico4" class="chart col-lg-6 col-md-6"></div>
+	</div>
+</div>
+
+=======
+				<a href="definirconvocatorias" class="definirbandas text-left">Definir convocatoria</a>
+			</div>
+		</li>
+	</ul>
+</div>
+>>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
