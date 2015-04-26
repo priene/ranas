@@ -1,54 +1,172 @@
 $(document).ready(function() {	
 
+	// Graficos estadisticos
+
+	var bandasgrafico1 = [];
+
+	if($(".graficos").length > 0){
+
+
+		$.ajax({
+		url: "home/graficos",
+		type: "post",
+		dataType: "json",
+		}).done(function(data) {
 	
+				$('#grafico1').highcharts({
+		            title: {
+		                text: 'Cantidad de bandas por genero'
+		            },
+		            tooltip: {
+		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		            },
+		                        plotOptions: {
+		                pie: {
+		                    allowPointSelect: true,
+		                    cursor: 'pointer',
+		                    dataLabels: {
+		                        enabled: false
+		                    },
+		                    showInLegend: true
+		                }
+		            },
+		            series: [{
+		                type: 'pie',
+		                name: 'Fechas realizadas',
+		                data: [
+		                    [data.grafico1[0]["nombre"],parseInt(data.grafico1[0]["count(id_genero)"])],
+		                    [data.grafico1[1]["nombre"],parseInt(data.grafico1[1]["count(id_genero)"])],
+		                    [data.grafico1[2]["nombre"],parseInt(data.grafico1[2]["count(id_genero)"])],
+		                    [data.grafico1[3]["nombre"],parseInt(data.grafico1[3]["count(id_genero)"])],
+		                    [data.grafico1[4]["nombre"],parseInt(data.grafico1[4]["count(id_genero)"])]
+		                ]
+		            }]
+		        });
 
 
-	// Background Nosotros
 
-	if($("#nosotros").length > 0){
-		$("body").css("background","#AB1E22");
-		$("footer").css({"position":"fixed","bottom":"0","left":"0"});
-	}else{
-		$("body").css("background","#201D19");
-		$("footer").css({"position":"unset","bottom":"0","left":"0"});
-	}
 
-	if($(".users").length > 0){
-		$('#grafico1').highcharts({
+		$('#grafico3').highcharts({
+            chart: {
+                type: 'column'
+            },
             title: {
                 text: 'Bandas que mas fechas realizaron'
             },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            xAxis: {
+                categories: [
+                    'Bandas'               ]
             },
-                        plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: false
-                    },
-                    showInLegend: true
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Cantidad de fechas'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                colorbypoint: true,
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
                 }
             },
             series: [{
-                type: 'pie',
-                name: 'Fechas realizadas',
-                data: [
-                    ['Firefox',   45.0],
-                    ['IE',       26.8],
-                    {
-                        name: 'Chrome',
-                        y: 12.8,
-                        sliced: true,
-                        selected: true
-                    },
-                    ['Safari',    8.5],
-                    ['Opera',     6.2],
-                    ['Others',   0.7]
-                ]
+                name: data.grafico3[0]["nombre"],
+                data: [parseInt(data.grafico3[0]["count(id_banda)"])]
+    
+            },{
+                name: data.grafico3[1]["nombre"],
+                data: [parseInt(data.grafico3[1]["count(id_banda)"])]
+    
+            },{
+                name: data.grafico3[2]["nombre"],
+                data: [parseInt(data.grafico3[2]["count(id_banda)"])]
+    
+            },{
+                name: data.grafico3[3]["nombre"],
+                data: [parseInt(data.grafico3[3]["count(id_banda)"])]
+    
             }]
         });
+
+
+
+
+		$('#grafico4').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: 'Bandas en<br>la propuesta',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 50
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -50,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%']
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Porcentaje',
+            innerSize: '50%',
+            data: [
+                [data.grafico4[0]["nombre"],parseInt(data.grafico4[0]["count(id_estado)"])],
+                [data.grafico4[1]["nombre"],parseInt(data.grafico4[1]["count(id_estado)"])],
+                [data.grafico4[2]["nombre"],parseInt(data.grafico4[2]["count(id_estado)"])]
+                /*{
+                    name: 'Others',
+                    y: 0.7,
+                    dataLabels: {
+                        enabled: false
+                    }
+                }*/
+            ]
+        }]
+    });
+
+
+
+
+
+
+			
+		});
+
+
+
+
+
+
+
+
+
+
 
 
 		$('#grafico2').highcharts({
@@ -90,111 +208,11 @@ $(document).ready(function() {
     });
 
 
-$('#grafico3').highcharts({
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Monthly Average Rainfall'
-            },
-            subtitle: {
-                text: 'Source: WorldClimate.com'
-            },
-            xAxis: {
-                categories: [
-                    'Bandas'               ]
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Rainfall (mm)'
-                }
-            },
-            tooltip: {
-                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
-                colorbypoint: true,
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: 'Jan',
-                data: [49.9]
-    
-            },{
-                name: 'Feb',
-                data: [71.5]
-    
-            },{
-                name: 'Mar',
-                data: [41.5]
-    
-            },{
-                name: 'Abr',
-                data: [51.5]
-    
-            }]
-        });
 
 
 
-		$('#grafico4').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
-        },
-        title: {
-            text: 'Bandas en<br>la propuesta',
-            align: 'center',
-            verticalAlign: 'middle',
-            y: 50
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: true,
-                    distance: -50,
-                    style: {
-                        fontWeight: 'bold',
-                        color: 'white',
-                        textShadow: '0px 1px 2px black'
-                    }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Browser share',
-            innerSize: '50%',
-            data: [
-                ['Incorporadas',   45.0],
-                ['Invitar',       26.8],
-                ['No Incorporadas', 12.8]
-                /*{
-                    name: 'Others',
-                    y: 0.7,
-                    dataLabels: {
-                        enabled: false
-                    }
-                }*/
-            ]
-        }]
-    });
+
+
 
 
 
@@ -224,10 +242,10 @@ $('#grafico3').highcharts({
 	}
 
 
+	// General de las bandas mas significativas, fade in y out de la info de las bandas
+
 	$(document).scroll(function () {
     var y = $(this).scrollTop();
-
-    //alert($(this).scrollTop("#banda3").position().top);
 
     if (y > 200) {
         $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeOut(); 
@@ -285,36 +303,8 @@ $('#grafico3').highcharts({
 
 
 
-	$(".addbanda").click(function(){
-		
-		var idbn = $(this).prev().attr("data-idbn");
-		if ($(this).prev().val() != ""){
-			$(this).next().show();
-			$(this).next().children().show();
-			$(this).next().children().children("tbody").append("<tr class='" + idbn + "'><td>" + $(this).prev().val() + "</td><td><a href='javascript:void(0);'>Eliminar</a></td></tr>");	
-		}
-		$(this).prev().val("");
-	});
 
-	$(".listabandas").on("click","a",function(){
-		$(this).parent().parent().remove();
-		if($(".listabandas tbody").html() == '')
-			$(".listabandas").hide();
-	});
-
-
-	$(".tieneslider").click(function(){
-		if($(this).prop('checked')){
-			$(".imgslider-input").show();
-			$(".posicion-slide-input").show();
-		}else{
-			$(".imgslider-input").hide();
-			$(".posicion-slide-input").hide();
-		}
-	});
-
-
-	// Ingresar Banda
+	// Muestra el ingreso de fechas, bandas, lugar y genero
 
 	$(".showing").click(function(){
 		$(".validar").trigger("reset");
@@ -376,6 +366,7 @@ $('#grafico3').highcharts({
 
 	});
 
+	// Modificar fecha, banda, lugar y genero
 	
 	$(document).on("click",".modi",function(e){
 		e.preventDefault();
@@ -524,6 +515,7 @@ $('#grafico3').highcharts({
 
 	});	
 
+	// Eliminar un registro
 
 	$(document).on("click",".elim",function(e){
 
@@ -576,6 +568,35 @@ $('#grafico3').highcharts({
 		});
 	});
 
+	// Ingresar fechas
+
+	$(".addbanda").click(function(){
+		
+		var idbn = $(this).prev().attr("data-idbn");
+		if ($(this).prev().val() != ""){
+			$(this).next().show();
+			$(this).next().children().show();
+			$(this).next().children().children("tbody").append("<tr class='" + idbn + "'><td>" + $(this).prev().val() + "</td><td><a href='javascript:void(0);'>Eliminar</a></td></tr>");	
+		}
+		$(this).prev().val("");
+	});
+
+	$(".listabandas").on("click","a",function(){
+		$(this).parent().parent().remove();
+		if($(".listabandas tbody").html() == '')
+			$(".listabandas").hide();
+	});
+
+
+	$(".tieneslider").click(function(){
+		if($(this).prop('checked')){
+			$(".imgslider-input").show();
+			$(".posicion-slide-input").show();
+		}else{
+			$(".imgslider-input").hide();
+			$(".posicion-slide-input").hide();
+		}
+	});
 
 	$('#validar_ingresar_fecha').submit(function(){
 
@@ -712,7 +733,8 @@ $('#grafico3').highcharts({
 
     });
 
-
+	
+	// Validar Modificar lugar, Modificar genero y Modificar banda
 
     $('.validar_modificar').submit(function(e){
 
@@ -746,6 +768,7 @@ $('#grafico3').highcharts({
     });
 
     // Valida el ingreso de Banda, Lugar y Genero
+
     $('.validar').submit(function(e){
 
     	e.preventDefault();
@@ -784,7 +807,7 @@ $('#grafico3').highcharts({
 
 
 
-
+    // Validar Buscar lugar, Buscar banda y Buscar fecha
 
 	$('.validar_buscar').submit(function(){
 
@@ -831,6 +854,180 @@ $('#grafico3').highcharts({
 		return false;		
 
     });
+
+
+
+
+
+
+
+
+
+
+	// Filtro de Calendario de fechas
+
+	$(".calendario_criterio").click(function(e){
+		e.preventDefault();
+
+		$.ajax({
+           url: $(this).attr("href"),
+           type:'post',
+           dataType: "json",
+          }).done(function(data) {
+
+          	$(".fechascal").html("");
+				var obj = data.fecha;
+				var rutaimgs = "";
+				if (obj != ""){
+					$.each(obj, function(key,value) {
+
+						rutaimgs = "http://localhost/ranas2";
+
+						//rutaimgs = "http://www.ranasrojas.com.ar"; //Esto va en PRD
+
+						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia + " - " + value.hora + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
+					});
+				}
+				else{
+					$(".fechascal").html("<p>No se encontraron resultados</p>");
+			} 
+
+		}, 'json');
+
+		return false;
+	});
+
+
+
+
+	$(".radiomedia").change(function(){
+		if ($(this).val() == 'si') {
+        	$(this).next().next().prop('disabled', false);
+        }
+        else{
+         	$(this).next().next().next().next().prop('disabled', true); 
+        }
+	});
+
+
+
+
+
+
+	// ----------- Bandas -----------
+
+	$("select[name='pais']").change(function(){
+
+		if($(this).val() != '12'){
+			$(this).parent().parent().next().hide();
+			$(this).parent().parent().next().next().hide();
+		}else{
+			$(this).parent().parent().next().show();
+			$(this).parent().parent().next().next().show();
+		}
+	});
+
+	$("select[name='provincia']").change(function(){
+		
+		$.ajax({
+			url: 'home/localidades/' + $(this).val(),
+			type:'post',
+			context: this,
+			dataType: "json",
+		}).done(function(data) {
+			
+			$(this).parent().parent().next().children().next().html("<select name='localidad' class='form-control'></select>");
+			var pepe = $(this).parent().parent().next().children().next().children();
+			pepe.html("");
+			$.each(data.localidades, function(key,value) {
+				pepe.append("<option value='" + value.id + "'>" + value.nombre + "</option>");
+				
+			});
+			$(this).parent().parent().next().show();
+
+		});
+	});
+
+	$(".otrocontacto").change(function(){
+		if ($(this).val() == 'si') {
+			$(".con2").val("");
+        	$(".contac2").show();
+        }
+        else{
+         	$(".contac2").hide();
+        }
+	});
+
+
+	$(document).on("click", ".verinfo", function(e){
+	
+		e.preventDefault();
+
+		$(".dialogcontacto tbody").html("");
+		$(".dialogmedia").html("");
+
+		var a = $(this).attr("href");
+
+		$.ajax({
+			url: a,
+			type: "post",
+			dataType: "json",
+			}).done(function(data) {	
+
+				$("#dialog-confirm2 .dialognombre p").html(data.banda[0].bannom);
+				$("#dialog-confirm2 .dialoggenero p").html(data.banda[0].gennom);
+
+				$("#dialog-confirm2 .dialogpais p").html(data.banda[0].paisnombre);
+				$("#dialog-confirm2 .dialogprovincia p").html(data.banda[0].provincianombre);
+				$("#dialog-confirm2 .dialoglocalidad p").html(data.banda[0].localidadnombre);
+
+				
+
+				if (data.contacto[0] != undefined){
+					$.each(data.contacto, function(key,value) {
+						$(".dialogcontacto").show();
+						$(".dialogcontacto tbody").append("<tr><td>" + value.nombre + "</td><td>" + value.telefono + "</td><td>" + value.contacto + "</td></tr>");
+					});
+				}else{
+					$(".dialogcontacto").hide();
+				}
+
+				if (data.media[0] != undefined){
+					$.each(data.media, function(key,value) {
+						$(".dialogmedia").show();
+						$(".dialogmedia").append("<tr><th>" + value.nombre + "</th><td>" + value.url + "</td></tr>");
+					});
+				}else{
+					$(".dialogmedia").hide();
+				}
+
+				$("#dialog-confirm2 .dialogturno p").html(data.banda[0].turnom);
+				$("#dialog-confirm2 .dialogconvocatoria p").html(data.banda[0].tipo);
+				$("#dialog-confirm2 .dialogestado p").html(data.banda[0].estnom);
+				if (data.banda[0].confirmada == 1)
+					$("#dialog-confirm2 .dialogconfirmada p").html("SI");
+				else
+					$("#dialog-confirm2 .dialogconfirmada p").html("NO");
+
+				$("#dialog-confirm2").dialog({
+					resizable: false,
+					height:500,
+					width: 500,
+					modal: true,
+					buttons: {
+						"Cerrar": {
+							text: 'Cerrar',
+							class: 'btncerrar',
+							click: function() {
+								
+								$(this).dialog("close");
+								
+							}
+						}
+					}
+				});
+		});
+	});
 
 
 	$("#validar_buscar_banda select[name='criterio']").change(function(){
@@ -903,171 +1100,7 @@ $('#grafico3').highcharts({
 		}
 	});
 
-
-
-
-
-
-	$(document).on("click", ".verinfo", function(e){
-	
-		e.preventDefault();
-
-		$(".dialogcontacto tbody").html("");
-		$(".dialogmedia").html("");
-
-		var a = $(this).attr("href");
-
-		$.ajax({
-			url: a,
-			type: "post",
-			dataType: "json",
-			}).done(function(data) {	
-
-				
-
-				$("#dialog-confirm2 .dialognombre p").html(data.banda[0].bannom);
-				$("#dialog-confirm2 .dialoggenero p").html(data.banda[0].gennom);
-
-				$("#dialog-confirm2 .dialogpais p").html(data.banda[0].paisnombre);
-				$("#dialog-confirm2 .dialogprovincia p").html(data.banda[0].provincianombre);
-				$("#dialog-confirm2 .dialoglocalidad p").html(data.banda[0].localidadnombre);
-
-				
-
-				if (data.contacto[0] != undefined){
-					$.each(data.contacto, function(key,value) {
-						$(".dialogcontacto").show();
-						$(".dialogcontacto tbody").append("<tr><td>" + value.nombre + "</td><td>" + value.telefono + "</td><td>" + value.contacto + "</td></tr>");
-					});
-				}else{
-					$(".dialogcontacto").hide();
-				}
-
-				if (data.media[0] != undefined){
-					$.each(data.media, function(key,value) {
-						$(".dialogmedia").show();
-						$(".dialogmedia").append("<tr><th>" + value.nombre + "</th><td>" + value.url + "</td></tr>");
-					});
-				}else{
-					$(".dialogmedia").hide();
-				}
-
-				$("#dialog-confirm2 .dialogturno p").html(data.banda[0].turnom);
-				$("#dialog-confirm2 .dialogconvocatoria p").html(data.banda[0].tipo);
-				$("#dialog-confirm2 .dialogestado p").html(data.banda[0].estnom);
-				if (data.banda[0].confirmada == 1)
-					$("#dialog-confirm2 .dialogconfirmada p").html("SI");
-				else
-					$("#dialog-confirm2 .dialogconfirmada p").html("NO");
-
-				$("#dialog-confirm2").dialog({
-					resizable: false,
-					height:500,
-					width: 500,
-					modal: true,
-					buttons: {
-						"Cerrar": {
-							text: 'Cerrar',
-							class: 'btncerrar',
-							click: function() {
-								
-								$(this).dialog("close");
-								
-							}
-						}
-					}
-				});
-		});
-	});
-
-
-	$(".calendario_criterio").click(function(e){
-		e.preventDefault();
-
-		$.ajax({
-           url: $(this).attr("href"),
-           type:'post',
-           dataType: "json",
-          }).done(function(data) {
-
-          	$(".fechascal").html("");
-				var obj = data.fecha;
-				var rutaimgs = "";
-				if (obj != ""){
-					$.each(obj, function(key,value) {
-
-						rutaimgs = "http://localhost/ranas2";
-
-						//rutaimgs = "http://www.ranasrojas.com.ar"; //Esto va en PRD
-
-						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia + " - " + value.hora + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
-					});
-				}
-				else{
-					$(".fechascal").html("<p>No se encontraron resultados</p>");
-			} 
-
-		}, 'json');
-
-		return false;
-	});
-
-
-
-
-	$(".radiomedia").change(function(){
-		if ($(this).val() == 'si') {
-        	$(this).next().next().prop('disabled', false);
-        }
-        else{
-         	$(this).next().next().next().next().prop('disabled', true); 
-        }
-	});
-
-
-	$(".otrocontacto").change(function(){
-		if ($(this).val() == 'si') {
-			$(".con2").val("");
-        	$(".contac2").show();
-        }
-        else{
-         	$(".contac2").hide();
-        }
-	});
-
-	$("select[name='pais']").change(function(){
-
-		if($(this).val() != '12'){
-			$(this).parent().parent().next().hide();
-			$(this).parent().parent().next().next().hide();
-		}else{
-			$(this).parent().parent().next().show();
-			$(this).parent().parent().next().next().show();
-		}
-	});
-
-
-	$("select[name='provincia']").change(function(){
-		
-		$.ajax({
-			url: 'home/localidades/' + $(this).val(),
-			type:'post',
-			context: this,
-			dataType: "json",
-		}).done(function(data) {
-			
-			$(this).parent().parent().next().children().next().html("<select name='localidad' class='form-control'></select>");
-			var pepe = $(this).parent().parent().next().children().next().children();
-			pepe.html("");
-			$.each(data.localidades, function(key,value) {
-				pepe.append("<option value='" + value.id + "'>" + value.nombre + "</option>");
-				
-			});
-			$(this).parent().parent().next().show();
-
-		});
-	});
-
+	// Ver información de las bandas que tocaron en la fecha
 	
 	$(document).on("click", ".verbandas", function(e){
 		
@@ -1098,6 +1131,7 @@ $('#grafico3').highcharts({
 
   });
 
+	// ----------- Modificar fecha -----------
 
 	$(".mod").on("click", ".eliminarimagen", function(e){
 		e.preventDefault();
@@ -1114,7 +1148,9 @@ $('#grafico3').highcharts({
 	});
 
 
-		$(".confirmarestadobanda").on("click",function(e){
+	// ----------- Confirmar bandas, Definir turnos, Definir convocatorias -----------
+
+	$(".confirmarestadobanda").on("click",function(e){
 		e.preventDefault();
 		bac = [];
 		if($(this).attr("id") == "eb1"){
@@ -1196,6 +1232,7 @@ $('#grafico3').highcharts({
 		}
 	});
 
+	// ----------- Confirmar bandas -----------
 
 	$("input[name='todos']").change(function(){
 		if(this.checked) { 
@@ -1222,9 +1259,13 @@ $('#grafico3').highcharts({
 
 
 
+	// ----------- Libreria WOW -----------
 
 	new WOW().init();
 	
+	
+	// ----------- Slider -----------
+
 	$('.flexslider').flexslider({
 		animation: "fade",
 		directionNav: false,
@@ -1240,9 +1281,10 @@ $('#grafico3').highcharts({
 		});
 	});
 
-
+	// Bandas
 	$('.parallax').scrolly({bgParallax: true});
 
+	// ----------- Ingresar fecha -----------
 
 	$('#ingresar-fecha-hora').clockpicker({
 		autoclose: true
@@ -1284,6 +1326,7 @@ $('#grafico3').highcharts({
     	});
   	});
 
+	// Animsition
 
   	$(".animsition").animsition({
 	  
@@ -1292,36 +1335,24 @@ $('#grafico3').highcharts({
 	    inDuration            :    1500,
 	    outDuration           :    1200,
 	    linkElement           :   '.animsition-link',
-	    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
 	    loading               :    true,
-	    loadingParentElement  :   'body', //animsition wrapper element
+	    loadingParentElement  :   'body',
 	    loadingClass          :   'animsition-loading',
 	    unSupportCss          : [ 'animation-duration',
 	                              '-webkit-animation-duration',
 	                              '-o-animation-duration'
 	                            ],
-	    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-	    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-	    
 	    overlay               :   false,
-	    
 	    overlayClass          :   'animsition-overlay-slide',
 	    overlayParentElement  :   'body'
 	  });
 
 
 
-
-
-
-
-
-
-
-
 });
 
 
+// Limpiar formulario de modificar banda
 
 function limpiar_form_modbanda(){
 	$("#modificar-banda-tel-contacto").val("");

@@ -1096,6 +1096,38 @@ class info_model extends CI_Model{
 		}
 	}
 
+	function get_cantidadbandasmasfechas(){
+		$this->db->select('banda.id,fecha_banda.id_banda,banda.nombre, count(id_banda)');
+		$this->db->from('fecha_banda');
+		$this->db->join('banda', 'banda.id = fecha_banda.id_banda');
+		$this->db->group_by("id_banda"); 
+		$this->db->order_by("count(id_banda)","desc"); 
+		$this->db->limit(4);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	function get_cantidadbandasporgenero(){
+		$this->db->select('banda.id_genero,genero.id,genero.nombre,count(id_genero)');
+		$this->db->from('banda');
+		$this->db->join('genero', 'genero.id = banda.id_genero');
+		$this->db->group_by("nombre"); 
+		$this->db->order_by("count(id_genero)","desc"); 
+		$this->db->limit(5);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	function get_cantidadbandaspropuesta(){
+		$this->db->select('banda.id_estado,estado.id,estado.nombre,count(id_estado)');
+		$this->db->from('banda');
+		$this->db->join('estado', 'estado.id = banda.id_estado');
+		$this->db->group_by("nombre"); 
+		$this->db->order_by("count(id_estado)","desc"); 
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 
 	/*function enviarEmailVerificacion($email,$codigo_verificacion){
 		$this->load->library('email');
