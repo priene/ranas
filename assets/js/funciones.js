@@ -13,141 +13,167 @@ $(document).ready(function() {
 		dataType: "json",
 		}).done(function(data) {
 	
-				$('#grafico1').highcharts({
+			$('#grafico1').highcharts({
+	            title: {
+	                text: 'Porcentaje de bandas por genero'
+	            },
+	            tooltip: {
+	                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	            },
+	                        plotOptions: {
+	                pie: {
+	                    allowPointSelect: true,
+	                    cursor: 'pointer',
+	                    dataLabels: {
+	                        enabled: false
+	                    },
+	                    showInLegend: true
+	                }
+	            },
+	            series: [{
+	                type: 'pie',
+	                name: 'Fechas realizadas',
+	                data: [
+	                    [data.grafico1[0]["nombre"],parseInt(data.grafico1[0]["count(id_genero)"])],
+	                    [data.grafico1[1]["nombre"],parseInt(data.grafico1[1]["count(id_genero)"])],
+	                    [data.grafico1[2]["nombre"],parseInt(data.grafico1[2]["count(id_genero)"])],
+	                    [data.grafico1[3]["nombre"],parseInt(data.grafico1[3]["count(id_genero)"])],
+	                    [data.grafico1[4]["nombre"],parseInt(data.grafico1[4]["count(id_genero)"])]
+	                ]
+	            }]
+	        });
+
+
+
+			$('#grafico2').highcharts({
+		        title: {
+		            text: 'Cantidad de bandas registradas por mes',
+		            x: -20 //center
+		        },
+		        /*subtitle: {
+		            text: 'Source: WorldClimate.com',
+		            x: -20
+		        },*/
+		        xAxis: {
+		            categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+		                'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+		        },
+		        yAxis: {
 		            title: {
-		                text: 'Cantidad de bandas por genero'
+		                text: 'Bandas'
 		            },
-		            tooltip: {
-		                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		            },
-		                        plotOptions: {
-		                pie: {
-		                    allowPointSelect: true,
-		                    cursor: 'pointer',
-		                    dataLabels: {
-		                        enabled: false
-		                    },
-		                    showInLegend: true
-		                }
-		            },
-		            series: [{
-		                type: 'pie',
-		                name: 'Fechas realizadas',
-		                data: [
-		                    [data.grafico1[0]["nombre"],parseInt(data.grafico1[0]["count(id_genero)"])],
-		                    [data.grafico1[1]["nombre"],parseInt(data.grafico1[1]["count(id_genero)"])],
-		                    [data.grafico1[2]["nombre"],parseInt(data.grafico1[2]["count(id_genero)"])],
-		                    [data.grafico1[3]["nombre"],parseInt(data.grafico1[3]["count(id_genero)"])],
-		                    [data.grafico1[4]["nombre"],parseInt(data.grafico1[4]["count(id_genero)"])]
-		                ]
+		            plotLines: [{
+		                value: 0,
+		                width: 1,
+		                color: '#808080'
 		            }]
-		        });
+		        },
+		        legend: {
+		            layout: 'vertical',
+		            align: 'right',
+		            verticalAlign: 'middle',
+		            borderWidth: 0
+		        },
+		        series: [{
+		            name: 'Bandas',
+		            data: [parseInt(data.grafico2[0]["cantidad"]), parseInt(data.grafico2[1]["cantidad"]), parseInt(data.grafico2[2]["cantidad"]), parseInt(data.grafico2[3]["cantidad"]), parseInt(data.grafico2[4]["cantidad"]), parseInt(data.grafico2[5]["cantidad"]), parseInt(data.grafico2[6]["cantidad"]), parseInt(data.grafico2[7]["cantidad"]), parseInt(data.grafico2[8]["cantidad"]), parseInt(data.grafico2[9]["cantidad"]), parseInt(data.grafico2[10]["cantidad"]),parseInt(data.grafico2[11]["cantidad"])]
+		        }]
+		    });
 
 
 
 
-		$('#grafico3').highcharts({
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Bandas que mas fechas realizaron'
-            },
-            xAxis: {
-                categories: [
-                    'Bandas'               ]
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Cantidad de fechas'
-                }
-            },
-            tooltip: {
-                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
-                footerFormat: '</table>',
-                shared: true,
-                useHTML: true
-            },
-            plotOptions: {
-                colorbypoint: true,
-                column: {
-                    pointPadding: 0.2,
-                    borderWidth: 0
-                }
-            },
-            series: [{
-                name: data.grafico3[0]["nombre"],
-                data: [parseInt(data.grafico3[0]["count(id_banda)"])]
-    
-            },{
-                name: data.grafico3[1]["nombre"],
-                data: [parseInt(data.grafico3[1]["count(id_banda)"])]
-    
-            },{
-                name: data.grafico3[2]["nombre"],
-                data: [parseInt(data.grafico3[2]["count(id_banda)"])]
-    
-            },{
-                name: data.grafico3[3]["nombre"],
-                data: [parseInt(data.grafico3[3]["count(id_banda)"])]
-    
-            }]
-        });
+			$('#grafico3').highcharts({
+	            chart: {
+	                type: 'column'
+	            },
+	            title: {
+	                text: 'Bandas que mas fechas realizaron'
+	            },
+	            xAxis: {
+	                categories: [
+	                    'Fechas realizadas'               ]
+	            },
+	            yAxis: {
+	                min: 0,
+	                title: {
+	                    text: 'Cantidad de fechas'
+	                }
+	            },
+	            tooltip: {
+	                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	                    '<td style="padding:0"><b> {point.y}</b></td></tr>',
+	                footerFormat: '</table>',
+	                shared: true,
+	                useHTML: true
+	            },
+	            plotOptions: {
+	                colorbypoint: true,
+	                column: {
+	                    pointPadding: 0.2,
+	                    borderWidth: 0
+	                }
+	            },
+	            series: [{
+	                name: data.grafico3[0]["nombre"],
+	                data: [parseInt(data.grafico3[0]["count(id_banda)"])]
+	    
+	            },{
+	                name: data.grafico3[1]["nombre"],
+	                data: [parseInt(data.grafico3[1]["count(id_banda)"])]
+	    
+	            },{
+	                name: data.grafico3[2]["nombre"],
+	                data: [parseInt(data.grafico3[2]["count(id_banda)"])]
+	    
+	            },{
+	                name: data.grafico3[3]["nombre"],
+	                data: [parseInt(data.grafico3[3]["count(id_banda)"])]
+	            }]
+	        });
 
-
-
-
-		$('#grafico4').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
-        },
-        title: {
-            text: 'Bandas en<br>la propuesta',
-            align: 'center',
-            verticalAlign: 'middle',
-            y: 50
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    enabled: true,
-                    distance: -50,
-                    style: {
-                        fontWeight: 'bold',
-                        color: 'white',
-                        textShadow: '0px 1px 2px black'
-                    }
-                },
-                startAngle: -90,
-                endAngle: 90,
-                center: ['50%', '75%']
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: 'Porcentaje',
-            innerSize: '50%',
-            data: [
-                [data.grafico4[0]["nombre"],parseInt(data.grafico4[0]["count(id_estado)"])],
-                [data.grafico4[1]["nombre"],parseInt(data.grafico4[1]["count(id_estado)"])],
-                [data.grafico4[2]["nombre"],parseInt(data.grafico4[2]["count(id_estado)"])]
-                /*{
-                    name: 'Others',
-                    y: 0.7,
-                    dataLabels: {
-                        enabled: false
-                    }
-                }*/
-            ]
-        }]
+			$('#grafico4').highcharts({
+	        chart: {
+	            plotBackgroundColor: null,
+	            plotBorderWidth: 0,
+	            plotShadow: false
+	        },
+	        title: {
+	            text: 'Bandas en<br>la propuesta',
+	            align: 'center',
+	            verticalAlign: 'middle',
+	            y: 50
+	        },
+	        tooltip: {
+	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	        },
+	        plotOptions: {
+	            pie: {
+	                dataLabels: {
+	                    enabled: true,
+	                    distance: -50,
+	                    style: {
+	                        fontWeight: 'bold',
+	                        color: 'white',
+	                        textShadow: '0px 1px 2px black'
+	                    }
+	                },
+	                startAngle: -90,
+	                endAngle: 90,
+	                center: ['50%', '75%']
+	            }
+	        },
+	        series: [{
+	            type: 'pie',
+	            name: 'Porcentaje',
+	            innerSize: '50%',
+	            data: [
+	                [data.grafico4[0]["nombre"],parseInt(data.grafico4[0]["count(id_estado)"])],
+	                [data.grafico4[1]["nombre"],parseInt(data.grafico4[1]["count(id_estado)"])],
+	                [data.grafico4[2]["nombre"],parseInt(data.grafico4[2]["count(id_estado)"])]
+	            ]
+	        }]
     });
 
 
@@ -169,43 +195,7 @@ $(document).ready(function() {
 
 
 
-		$('#grafico2').highcharts({
-        title: {
-            text: 'Cantidad de bandas registradas por semana',
-            x: -20 //center
-        },
-        /*subtitle: {
-            text: 'Source: WorldClimate.com',
-            x: -20
-        },*/
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: 'Bandas'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: '°C'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Bandas',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        }]
-    });
+
 
 
 

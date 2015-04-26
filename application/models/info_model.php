@@ -1128,6 +1128,15 @@ class info_model extends CI_Model{
 		return $query->result();
 	}
 
+	function get_cantidadbandasmes(){
+		$this->db->select('mes.nombre,mes.id,banda.fecha_ingreso,count(fecha_ingreso) as cantidad');
+		$this->db->from('mes');
+		$this->db->join('banda', 'mes.id = MONTH(banda.fecha_ingreso)','left');
+		$this->db->group_by('mes.id');
+		$query = $this->db->get();
+		return $query->result(); 
+	}
+
 
 	/*function enviarEmailVerificacion($email,$codigo_verificacion){
 		$this->load->library('email');
