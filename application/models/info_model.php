@@ -237,7 +237,8 @@ class info_model extends CI_Model{
 		   'id_convocatoria' => $convocatoria,
 		   'id_turno' => $turno,
 		   'id_estado' => $estado,
-		   'confirmada' => $confirmada
+		   'confirmada' => $confirmada,
+		   'fecha_ingreso' => date('Y-m-d')
 		);
 
 		$this->db->insert('banda', $datos);
@@ -723,7 +724,8 @@ class info_model extends CI_Model{
 		   'id_convocatoria' => $convocatoria,
 		   'id_turno' => $turno,
 		   'id_estado' => $estado,
-		   'confirmada' => $confirmada
+		   'confirmada' => $confirmada,
+		   'fecha_ingreso' => date('Y-m-d')
 		);
 
 		$this->db->where('id',$idbanda);
