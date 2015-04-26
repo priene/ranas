@@ -52,8 +52,16 @@
 	<div class="contenedor users menulogin">
 
 	<div class="navuser col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<p>Admin Ranas Rojas</p>
-		<p>Cerrar sesión</p>
+		<div id="navbarCollapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/menulogin', 'Dashboard', 'class="navico proximasIco"', 'title="Dashboard"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Ingresar Fecha', 'class="navico proximasIco"', 'title="Ingresar Fecha"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_banda', 'Ingresar Banda', 'class="navico proximasIco"', 'title="Ingresar Banda"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_lugar', 'Ingresar Lugar', 'class="navico bandasIco"', 'title="Ingresar Lugar"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_genero', 'Ingresar Genero', 'class="navico proximasIco"', 'title="Ingresar Genero"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/logout', 'Cerrar Sesion', 'class="navico proximasIco"', 'title="Cerrar Sesion"'); ?></li>
+            </ul>
+        </div>
 	</div>
 
 
