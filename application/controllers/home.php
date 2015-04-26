@@ -196,6 +196,18 @@ class Home extends CI_Controller {
 		}
 	}
 
+
+	function graficos(){
+		$response["grafico1"] = $this->info_model->get_cantidadbandasporgenero();
+		$response["grafico2"] = $this->info_model->get_cantidadbandasmes();
+		$response["grafico3"] = $this->info_model->get_cantidadbandasmasfechas();
+		$response["grafico4"] = $this->info_model->get_cantidadbandaspropuesta();
+		header('Content-type: application/json; charset=utf-8');
+		echo json_encode($response);
+		exit();
+	}
+
+
 	function logout(){
 		$this->session->unset_userdata('logueado');
 		session_destroy();
