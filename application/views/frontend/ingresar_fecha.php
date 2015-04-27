@@ -1,4 +1,4 @@
-<div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
+<div class="fechasbg dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
 	<section id="ingresar-fecha">
 
 	<div class="fechamenu">
