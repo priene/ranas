@@ -36,6 +36,7 @@ p{
 ul{
 	list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 table{
@@ -1006,6 +1007,10 @@ footer{
   margin-bottom: 50px;
 }
 
+.dashboard{
+  margin-top: 80px;
+}
+
 .contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar, .repetir{
   display: none;
 }
@@ -1023,21 +1028,26 @@ footer{
 }
 
 .panel {
-    background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    margin: 20px;
     border-color: #337ab7;
     color: black;
+    margin-bottom: 20px;
+}
+
+.bloques{
+  overflow: hidden;
 }
 
 .text-right{
   text-align: right;
+  padding: 0 15px 15px;
 }
 
 .panelfooter{
   text-align: left;
-  padding: 10px 0;
+  background-color: #FFFFFF;
+  padding: 10px;
 }
 
 .panelfooter a{
@@ -1063,7 +1073,7 @@ footer{
 .panelheader{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    padding: 0 15px 15px;
+    /*padding: 0 15px 15px;*/
     color: #FFFFFF;
 }
 

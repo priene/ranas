@@ -47,6 +47,7 @@
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/nosotros', 'Nosotros', 'class="navico proximasIco"', 'title="Nosotros"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1s"><?php echo anchor('/calendario', 'Calendario', 'class="navico proximasIco"', 'title="Calendario"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/bandas', 'Bandas', 'class="navico bandasIco"', 'title="Bandas"'); ?></li>
+					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/registrobanda', 'Registrá tu banda', 'class="navico bandasIco"', 'title="Registrá tu banda"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.5s"><?php echo anchor('/contacto', 'Contacto', 'class="navico proximasIco"', 'title="Contacto"'); ?></li>
 	            </ul>
 	        </div>
