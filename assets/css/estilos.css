@@ -868,6 +868,19 @@ footer{
   background-color: green !important;
  }
 
+
+
+/*------------- DASHBOARD ---------------*/
+
+
+.menulogin{
+  background-image: url("../img/pattern1.png");
+}
+
+/*------------- DASHBOARD ---------------*/
+/*-------------    FIN    ---------------*/
+
+
 /*------------- NAV USERS ---------------*/
 
 .navuser{
@@ -910,6 +923,82 @@ footer{
     color: #000000;
 
 }
+
+/*------------- NAV USERS ---------------*/
+/*-------------    FIN    ---------------*/
+
+/*----------- INGRESAR FECHA ------------*/
+
+.fechamenu{
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.fechamenu a{
+  width: 40%;
+  height: 50px;
+  max-width: 400px;
+  display: inline-block;
+  font-size: 1em;
+  color: #FFA500;
+  text-transform: uppercase;
+  line-height: 50px;
+  border-radius: 10px;
+  background-color: rgba(2, 2, 2, 0.4);
+  text-decoration: none;
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fechamenu a:hover{
+  background-color: #FFA500;
+  color: #000000;
+}
+
+.ing label{
+  display: block;
+  float: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.inputs{
+  float: none;
+  display: block;
+  margin: 0 auto;
+  /* width: 15%; */
+  padding: 0;
+  max-width: 300px;
+}
+
+.inputs input{
+  margin: 0.5em 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  padding: 0.75em 1.25em;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+
+.tablefecha{
+  margin: 3em 0 0 0;
+}
+
+/*----------- INGRESAR FECHA ------------*/
+/*-------------    FIN    ---------------*/
+
 
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 

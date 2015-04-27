@@ -1,8 +1,12 @@
-<div class="dashboard col-lg-9 col-md-9 col-sm-10 col-xs-10 users">
+<div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
 	<section id="ingresar-fecha">
-	<h2>Fechas</h2>
-	<a href="javascript:void(0);" class="showing">Ingresar Fecha</a>
-	<a href="javascript:void(0);" class="showbusc">Buscar Fecha</a>
+
+	<div class="fechamenu">
+		<a href="javascript:void(0);" class="showing">Ingresar</a>
+		<a href="javascript:void(0);" class="showbusc">Buscar</a>
+	</div>
+
+	<div class="tablefecha">
 	<div class="ing">
 	
 		<?php
@@ -67,7 +71,7 @@
 
         <div class="banda-input form-group">
         <?php
-        echo form_label('Buscar Banda', 'banda', $attrlabel);
+        echo form_label('Banda', 'banda', $attrlabel);
         echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($banda);
 		echo '<a href="javascript:void(0);" class="addbanda">Agregar</a>';
@@ -429,7 +433,7 @@
 		echo form_close();
 		?>
 	</div>
-
+	</div>
 	</section>
 </div>
 
