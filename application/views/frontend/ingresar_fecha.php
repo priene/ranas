@@ -82,7 +82,7 @@
 		<div class="tablabandas" id="tablabandasing">
 		<table class="listabandas">
 			<thead>
-				<tr>
+				<tr class="tablabandastitulo">
 					<th>Bandas</th>
 					<th>Eliminar</th>
 				</tr>
