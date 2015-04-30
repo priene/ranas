@@ -56,11 +56,11 @@
 		<div id="navbarCollapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/menulogin', 'Dashboard', 'class="navico proximasIco"', 'title="Dashboard"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Ingresar Fecha', 'class="navico proximasIco"', 'title="Ingresar Fecha"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_banda', 'Ingresar Banda', 'class="navico proximasIco"', 'title="Ingresar Banda"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_lugar', 'Ingresar Lugar', 'class="navico bandasIco"', 'title="Ingresar Lugar"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_genero', 'Ingresar Genero', 'class="navico proximasIco"', 'title="Ingresar Genero"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/logout', 'Cerrar Sesion', 'class="navico proximasIco"', 'title="Cerrar Sesion"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Fechas', 'class="navico proximasIco"', 'title="Ingresar Fecha"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_banda', 'Bandas', 'class="navico proximasIco"', 'title="Ingresar Banda"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_lugar', 'Lugares', 'class="navico bandasIco"', 'title="Ingresar Lugar"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_genero', 'Generos', 'class="navico proximasIco"', 'title="Ingresar Genero"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/logout', 'Log-out', 'class="navico proximasIco"', 'title="Cerrar Sesion"'); ?></li>
             </ul>
         </div>
 	</div>
