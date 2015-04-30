@@ -17,7 +17,11 @@ class Home extends CI_Controller {
 		$datos["imagenes"] = $this->info_model->get_slider_imagen();
 		$datos["infofechaslider"] = $this->info_model->get_info_slider();
 		$datos["infofechaagenda"] = $this->info_model->get_info_agenda();
-		$this->load->view("templates/frontend/header.php",$datos);
+		if($this->session->userdata('logueado')){
+			$this->load->view("templates/frontend/header2.php",$datos);	
+		}else{
+			$this->load->view("templates/frontend/header.php",$datos);
+		}
 		$this->load->view("frontend/index.php");
 		$this->load->view("templates/frontend/footer.html");
 	}
@@ -25,7 +29,11 @@ class Home extends CI_Controller {
 	function nosotros()
 	{
 		$datos["titulo"]="Nosotros";
-		$this->load->view("templates/frontend/header.php",$datos);
+		if($this->session->userdata('logueado')){
+			$this->load->view("templates/frontend/header2.php",$datos);	
+		}else{
+			$this->load->view("templates/frontend/header.php",$datos);
+		}
 		$this->load->view("frontend/nosotros.php");
 		$this->load->view("templates/frontend/footer.html");
 	}
@@ -35,7 +43,11 @@ class Home extends CI_Controller {
 		$datos["fecha"] = $this->info_model->fecha('todos');	
 		//$datos["bandasxfecha"] = $this->info_model->bandasxfecha('todos');
 		$datos["titulo"]="Calendario";
-		$this->load->view("templates/frontend/header.php",$datos);
+		if($this->session->userdata('logueado')){
+			$this->load->view("templates/frontend/header2.php",$datos);	
+		}else{
+			$this->load->view("templates/frontend/header.php",$datos);
+		}
 		$this->load->view("frontend/calendario.php",$datos);
 		$this->load->view("templates/frontend/footer.html");
 		
@@ -61,7 +73,11 @@ class Home extends CI_Controller {
 	function bandas()
 	{
 		$datos["titulo"]="Bandas";
-		$this->load->view("templates/frontend/header.php",$datos);
+		if($this->session->userdata('logueado')){
+			$this->load->view("templates/frontend/header2.php",$datos);	
+		}else{
+			$this->load->view("templates/frontend/header.php",$datos);
+		}
 		$this->load->view("frontend/bandas.php");
 		$this->load->view("templates/frontend/footer.html");
 	}
@@ -487,7 +503,11 @@ class Home extends CI_Controller {
 		$datos["paises"] = $this->info_model->paises();
 		$datos["provincia"] = $this->info_model->provincia();
 		$datos["titulo"]="Registrá tu banda";
-		$this->load->view("templates/frontend/header.php",$datos);
+		if($this->session->userdata('logueado')){
+			$this->load->view("templates/frontend/header2.php",$datos);	
+		}else{
+			$this->load->view("templates/frontend/header.php",$datos);
+		}
 		$this->load->view("frontend/registrobanda.php",$datos);
 		$this->load->view("templates/frontend/footer.html");	
 	}
