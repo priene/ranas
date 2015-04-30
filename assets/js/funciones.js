@@ -261,7 +261,6 @@ $(document).ready(function() {
 	$(document).on("click","[name=banda]",function(e){
 		
 		var inp = $(this).attr("id");
-
 		$("#" + inp).autocomplete({
 			source: function (request, response){
 		        $.ajax({
@@ -582,11 +581,9 @@ $(document).ready(function() {
 	$(".tieneslider").click(function(){
 		if($(this).prop('checked')){
 			$(".imgslider-input").show();
-			$("input[name='imgslider']").show();
 			$(".posicion-slide-input").show();
 		}else{
 			$(".imgslider-input").hide();
-			$("input[name='imgslider']").hide();
 			$(".posicion-slide-input").hide();
 		}
 	});

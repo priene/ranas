@@ -48,7 +48,7 @@
         );
 
         $attrlabel = array(
-        	'class'	=>	'col-lg-12 col-md-12 col-sm-12 col-xs-12'
+        	'class'	=>	'col-lg-6 col-md-6 col-sm-6 col-xs-12'
     	);
 
 
@@ -62,7 +62,7 @@
         <div class="nombre-input form-group">
         <?php
         echo form_label('Nombre', 'nombre', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($nombre);
 		echo "</div>";
 		echo form_error('nombre');
@@ -72,7 +72,7 @@
         <div class="banda-input form-group">
         <?php
         echo form_label('Banda', 'banda', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($banda);
 		echo '<a href="javascript:void(0);" class="addbanda">Agregar</a>';
 		
@@ -101,7 +101,7 @@
         <div class="lugar-input form-group">
         <?php
         echo form_label('Lugar', 'lugar', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_dropdown('lugar', $lug, set_value('lugar'));
 		echo "</div>";
 		echo form_error('lugar');
@@ -112,7 +112,7 @@
         <?php
         echo form_error('check_database');
         echo form_label('Fecha', 'fecha', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($fecha);
 		echo "</div>";
 		echo form_error('fecha');
@@ -122,7 +122,7 @@
 		<div class="input-group hora-input clockpicker form-group">
         <?php
         echo form_label('Hora', 'hora', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($hora);
 		echo "</div>";
 		echo form_error('hora');
@@ -131,7 +131,7 @@
 		</div>
 
 		<?php echo form_label('Imagen fecha', 'userfileing', $attrlabel); ?>
-		<div class="imgfile-input form-group inputs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="imgfile-input form-group inputs col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<input type="file" name="userfile" id="userfile" size="20" />
 		</div>
 
@@ -143,19 +143,19 @@
 		    'value'       => '1',
 		    'checked'     => FALSE
 	    );
-	    echo '<div class="sliderop col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs">';
+	    echo '<div class="sliderop col-lg-6 col-md-6 col-sm-6 col-xs-12">';
 	    echo form_checkbox($datacheckslide);
 		echo form_label('Imagen slider', 'imgslidering'); 
 		echo '</div>';
 		?>
-		<div class="imgslider-input form-group inputs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="imgslider-input form-group inputs col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<input type="file" name="imgslider" id="imgslider" size="20" />
 		</div>
 
 		<div class="posicion-slide-input">
 	        <?php
 	        echo form_label('Posicion slide', 'posicion', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 			echo form_dropdown('posicion', $pos, set_value('posicion'));
 			echo "</div>";
 			echo form_error('posicion');
@@ -197,7 +197,7 @@
 	        <div class="criterio-input form-group">
 	        <?php
 	        echo form_label('Criterio', 'criterio', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 			echo form_dropdown('criterio', $crit, set_value('criterio'));
 			echo '</div>';
 			echo form_error('criterio');
@@ -207,7 +207,7 @@
 	        <div class="buscar-input form-group">
 	        <?php
 	        echo form_label('Buscar', 'buscar', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 			echo form_input($buscar);
 			echo '</div>';
 			echo form_error('buscar');
@@ -290,7 +290,7 @@
 		}
 
 		$attrlabel = array(
-    		'class'	=>	'col-lg-12 col-md-12 col-sm-12 col-xs-12'
+    		'class'	=>	'col-lg-6 col-md-6 col-sm-6 col-xs-12'
 		);
 
         ?>
@@ -300,7 +300,7 @@
         <div class="nombre-input form-group">
         <?php
         echo form_label('Nombre', 'nombre', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($nombre);
 		echo "</div>";
 		echo form_error('nombre');
@@ -310,7 +310,7 @@
         <div class="banda-input form-group">
         <?php
         echo form_label('Buscar Banda', 'banda', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($banda);
 		echo '<a href="javascript:void(0);" class="addbanda">Agregar</a>';
 		echo form_error('banda');
@@ -337,7 +337,7 @@
         <div class="lugar-input form-group">
         <?php
         echo form_label('Lugar', 'lugar', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_dropdown('lugar', $lug, "", "id='modificar_fecha_lugar'");
 		echo "</div>";
 		echo form_error('lugar');
@@ -348,7 +348,7 @@
         <?php
         echo form_error('check_database');
         echo form_label('Fecha', 'fecha', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($fecha);
 		echo "</div>";
 		echo form_error('fecha');
@@ -358,7 +358,7 @@
 		<div class="hora-input clockpicker form-group">
         <?php
         echo form_label('Hora', 'hora', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($hora);
 		echo "</div>";
 		echo form_error('hora');
@@ -367,7 +367,7 @@
 
 		<?php 
 		echo form_label('Imagen fecha', 'userfilemod', $attrlabel);
-		echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs form-group'>";
+		echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs form-group'>";
 		
 		?>
 		<div class="imgfile-input">
@@ -388,7 +388,7 @@
 		    'value'       => '1',
 		    'checked'     => FALSE
 	    );
-	    echo '<div class="sliderop col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">';
+	    echo '<div class="sliderop col-lg-6 col-md-6 col-sm-6 col-xs-12 form-group">';
 		echo form_checkbox($datacheckslide);
 		echo form_label('Imagen slider', 'imgslidermod');
 		echo "</div>";
@@ -397,7 +397,7 @@
 		<div class="modifslider">
 		
 		<?php
-		echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs form-group'>"; 
+		echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs form-group'>"; 
 		?>
 		
 		<div class="imgslider-input">
@@ -415,7 +415,7 @@
 		<div class="posicion-slide-input form-group">
 	        <?php
 	        echo form_label('Posicion slide', 'posicion', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>"; 
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>"; 
 			echo form_dropdown('posicion', $pos, "", "id='modificar_fecha_posicion'")   ;
 			echo "</div>";
 			echo form_error('posicion');

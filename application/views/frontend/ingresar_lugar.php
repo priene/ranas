@@ -1,4 +1,4 @@
-<div class="lugarbg dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
+<div class="lugarbg dashboard col-lg-9 col-md-9 col-sm-10 col-xs-10 users">
 	<section id="ingresar-lugar">
 	<h2>Lugar</h2>
 	<a href="javascript:void(0);" class="showing">Ingresar Lugar</a>

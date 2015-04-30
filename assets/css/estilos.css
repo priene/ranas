@@ -610,23 +610,6 @@ input,textarea,select{
   display: none;
 }
 
-.tieneslider{
-  width: auto !important;
-  float: left;
-}
-
-.imgslider-input{
-  clear: both;
-}
-
-.imgslider-input{
-  overflow: hidden;
-}
-
-input[name="imgslider"]{
-  display: none;
-}
-
 .listabandas{
   margin: 1em auto;
   width: 100%;
@@ -896,7 +879,9 @@ footer{
 /*------------- DASHBOARD ---------------*/
 
 
-
+.menulogin{
+  background-image: url("../img/pattern1.png");
+}
 
 /*------------- DASHBOARD ---------------*/
 /*-------------    FIN    ---------------*/
@@ -975,30 +960,30 @@ footer{
   border-bottom: 1px solid;
   text-decoration: none;
   -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+     -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 
-  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
-/*.showbusc{
+.showbusc{
   border-top-right-radius: 10px;
 }
 
 .showing{
   border-top-left-radius: 10px;
-}*/
+}
 
 .fechamenu a:hover{
   background-color: #FFA500;
   color: #000000;
 }
 
-.ing label, .busc label, .mod label, #registrobanda label{
+.ing label{
   display: block;
   float: none;
   padding: 0;
@@ -1026,17 +1011,17 @@ footer{
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.65);
   -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+     -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
   -webkit-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
-  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+     -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
 .inputs input:focus{
@@ -1246,7 +1231,7 @@ footer{
 }
 
 .form-control{
-  width: 100% !important;
+  width: 40% !important;
 }
 
 .menuprincipal{
@@ -1267,10 +1252,7 @@ footer{
 }
 
 
-.clockpicker-popover{
-  left: 50%;
-  margin-bottom: 50px;
-}
+
 
 #dialog-overlay {
     width:100%; 
