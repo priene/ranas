@@ -1,8 +1,11 @@
 <div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
 	<section id="ingresar-banda">
-		<h2>Bandas</h2>
+
+	<div class="userSubmenu">
 		<a href="javascript:void(0);" class="showing">Ingresar Banda</a>
 		<a href="javascript:void(0);" class="showbusc">Buscar Banda</a>
+	</div>
+	
 		<div class="ing">
 			<?php
 			$attributes = array('class' => 'validar form-horizontal','id' => 'validar_ingresar_banda');

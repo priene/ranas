@@ -87,17 +87,21 @@ nav{
 }
 
 .navbar-nav {
-    display: table;
-    table-layout: fixed;
-    width: 100%; 
+  display: table;
+  table-layout: fixed;
+  width: 75%;
+  margin: 0 auto;
+  float: none;
+
 }
 
 .nav>li>a {
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   background-color: transparent;
-  /*padding: 0.5em 0 1em 0;*/
-  font-size: 1em;
+
+   /*padding: 0.5em 0 1em 0;*/
+  font-size: 0.9em;
  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
    -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
      -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
@@ -110,13 +114,13 @@ nav{
 }
   
 .nav li a:hover {
-  height: 80px;
+  height: 65px;
   background-color: #F90000;
 }
 
 .nav li a{
   height: 50px;
-  border-top: 1px solid #F90000;
+  /*border-top: 1px solid #F90000;*/
   background-color: rgba(0, 0, 0, 0.95);
 }
 
@@ -163,11 +167,12 @@ nav ul li{
 }
 
 #navbarCollapse{
+  border-top: 1px solid #FF0000;
   overflow: hidden;
 }
 
 .fechainfoslider{
-  width: 100%;
+  width: 100vw;
   text-align: left;
   position: absolute;
   /*bottom: 0;*/
@@ -192,19 +197,18 @@ nav ul li{
 }
 
 .fechainfoslider h2{
-  color: #FEC100  ;
+  color: #FEC100;
   margin: 0;
   font-size: 5em;
-  height: 90px;
+  /* height: 90px; */
+  padding-top: 10px;
   letter-spacing: 2px;
 }
 
 .fechainfoslider p{
+  margin: 0;
   font-size: 2em;
-  height: 44px;
 }
-
-
 
 /* INICIO */
 
@@ -229,7 +233,7 @@ nav ul li{
   /*background-image: url("../img/pattern2.png");
   background-attachment: fixed;
   /*background-color: #FEF603;*/
-  padding: 2em 15px;
+  padding: 0em 0 70px 0;
   position: relative;
   overflow: hidden;
 }
@@ -362,14 +366,16 @@ nav ul li{
 
 .infonos{
   height: 70%;
-  width: 100%;
+  width: 75%;
   position: absolute;
   margin: 0 auto;
   padding: 2em 25%;
-  top: 30%;
+  top: 35%;
   background-color: rgba(0, 0, 0, 0.9);
-  font-size: 2em;
-  text-align: center;
+  font-size: 1.15em;
+  line-height: 1.45em;
+  text-align: left;
+  border-radius: 50%;
 }
 
 .nosotrosRanaroja{
@@ -512,7 +518,7 @@ input,textarea,select{
 /* BANDAS */
 
 #bandas .banda{
-    min-height: 748px;
+    min-height: 90vh;
     position: relative;
     width: 100% !important;
     margin: 0;
@@ -524,22 +530,31 @@ input,textarea,select{
 .banda .infototalbanda {
     /*left: 40px;
     position: absolute;*/
-    bottom: 50px;
+    bottom: 0;
     width: 100%;
     z-index: 4;
-    background-color: rgba(0, 0, 0, 0.8);
+   /* background-color: rgba(0, 0, 0, 0.8);*/
     color: #FDC000;
     position: absolute;
     overflow: hidden;
-    text-align: right;
+    text-align: left;
     font-size: 1.5em;
+
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
 }
 
 .banda .infototalbanda h2{
-  font-size: 2em;
+  font-size: 4em;
   font-family: "Dimitri";
   letter-spacing: 1.5px;
-  margin: 1em 0 0 0;
+  margin: 0 auto;
 }
 
 .banda .infototalbanda p{
@@ -550,6 +565,7 @@ input,textarea,select{
 .banda .content{
   width: 75%;
   z-index: 4;
+  padding-bottom: 4em;
   margin: 0 auto;
 }
 
@@ -573,8 +589,9 @@ input,textarea,select{
 #bandas > div:nth-of-type(1) > div:nth-of-type(2) {
     background: url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
     margin: 0;
-    height: 748px;
+    height: 90vh;
     position:absolute;
+    background-size: cover;
     top:0px;
     width:100%;
     min-width: 960px;
@@ -585,6 +602,7 @@ input,textarea,select{
     margin: 0;
     height: 100%;
     position:absolute;
+    background-size: cover;
     top:0;
     width:100%;   
     min-width: 960px;
@@ -595,6 +613,7 @@ input,textarea,select{
     margin: 0;
     height: 100%;
     position:absolute;
+    background-size: cover;
     top:0;
     width:100%;
     min-width: 960px;   
@@ -609,6 +628,25 @@ input,textarea,select{
 
 .busc, .ing, .resul, .imgslider-input, .posicion-slide-input, .btn2, #dialog-confirm, .listabandas, .mod{
   display: none;
+}
+
+.busc input, .ing input{
+  background-color: transparent;
+  color: #A85903;
+  border: 0;
+  text-transform: uppercase;
+  /* border-top: 1px solid; */
+  border-bottom: 1px solid;
+  /* border: 0; */
+  padding: 0.5em 2.5em;
+  margin: 1em 0;
+  /* border-radius: 7px; */
+}
+
+.form-horizontal .form-group{
+  display: inline-block;
+  vertical-align: top;
+  margin:0 0.5em;
 }
 
 .tieneslider{
@@ -691,7 +729,7 @@ form label{
 }
 
 form .inputs{
-  text-align: left;
+  text-align: right;
 }
 
 
@@ -726,12 +764,10 @@ form .inputs{
 
 footer{
   position: fixed !important;
-  /*bottom: 0 !important;*/
-  width:80px;
-  top: 50% !important;
-  margin-top: -115px !important;
- /* height:82px;
-  clear: both;*/
+  /* bottom: 0 !important; */
+  bottom: 0;
+  /* margin-top: -115px !important; */
+  padding-bottom: 55px;
 }
 
 .linksfooter{
@@ -742,7 +778,7 @@ footer{
 
 .linksfooter img{
   float: left;
-  margin: 1em 20px;
+  margin: 1em 15px;
 }
 
 .linksfooter a{
@@ -764,10 +800,10 @@ footer{
 .mediaplayer {
   cursor: pointer;
   margin-right:2em;
-  top: 50%;
+  bottom: 75px;
   margin-top: -50px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   position: fixed;
   right: 0;
   border-radius: 50%;
@@ -888,19 +924,61 @@ footer{
   color: #FF0000;
 } 
 
- .highcharts-background{
-  background-color: green !important;
+.highcharts-background{
+  fill: transparent;
  }
 
+.highcharts-axis{
+  display: none;
+}
 
+.highcharts-xaxis-labels{
+  display: none;
+}
+
+.highcharts-legend-item{
+  display: none;
+}
 
 /*------------- DASHBOARD ---------------*/
 
+div#grafico1 path {
+  stroke: transparent;
+}
+
+div#grafico2 path {
+  stroke: #454545;
+  stroke-width: 1px;
+}
+
+div#grafico3 path {
+  stroke: #454545;
+  stroke-width: 1px;
+}
+
+div#grafico4 path {
+  stroke: transparent;
+}
 
 
+svg {
+  font-family: 'Montserrat Alternates', sans-serif !important;
+}
+
+.highcharts-markers path {
+  fill: #F90000 !important;
+}
+
+tspan {
+  fill: #939393;
+}
 
 /*------------- DASHBOARD ---------------*/
 /*-------------    FIN    ---------------*/
+
+
+
+
 
 
 /*------------- NAV USERS ---------------*/
@@ -909,6 +987,8 @@ footer{
   position: fixed;
   z-index: 100;
   padding: 0;
+  border-bottom: 1px solid #FFA500;
+  border-top: none;
 }
 
 .navuser a{
@@ -917,7 +997,6 @@ footer{
   color: #FFA500;
   height: 50px;
   border-top: none !important;
-  border-bottom: 1px solid #FFA500;
   background-color: rgba(0, 0, 0, 0.9);
   line-height: 15px;
   -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
@@ -940,7 +1019,7 @@ footer{
 }
 
 .navuser a:hover{
-    line-height: 70px;
+    line-height: 50px;
     background: #FFA500 !important;
     color: #000000;
 
@@ -958,13 +1037,13 @@ footer{
   background-position:center;
 }
 
-.fechamenu{
+.userSubmenu{
   width: 75%;
   margin: 0 auto;
   padding-top: 20px;
 }
 
-.fechamenu a{
+.userSubmenu a{
   width: 40%;
   height: 35px;
   max-width: 250px;
@@ -994,7 +1073,7 @@ footer{
   border-top-left-radius: 10px;
 }*/
 
-.fechamenu a:hover{
+.userSubmenu a:hover{
   background-color: #FFA500;
   color: #000000;
 }
@@ -1076,10 +1155,10 @@ footer{
 }
 
 .addbanda:link{
+  margin: 0.25em 0;
   text-decoration: none;
-  color: #FFA500;
-  display: block;
-  margin: 1em auto;
+  color: #5A5A5A;
+  display: inline-block;
   border-bottom: 1px solid;
 }
 
@@ -1095,10 +1174,10 @@ footer{
   padding: 0.75em 1em;
   margin: 1em auto;
   /* text-align: center; */
-  color: rgba(255, 255, 255, 0.65);
+  color: #5A5A5A;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.33);
-  border-radius: 7px;
+  border-radius: 4px;
   outline: 0;
   -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
      -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
@@ -1146,6 +1225,10 @@ footer{
   text-align: center;
 }
 
+.lugarfechahora{
+  margin: 1em 0;
+}
+
 /*----------- INGRESAR FECHA ------------*/
 /*-------------    FIN    ---------------*/
 
@@ -1165,7 +1248,7 @@ footer{
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
 .contenedor{
-  margin-bottom: 50px;
+
 }
 
 .dashboard{

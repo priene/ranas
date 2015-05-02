@@ -1,8 +1,11 @@
 <div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<section id="ingresar-genero">
-	<h2>Genero</h2>
-	<a href="javascript:void(0);" class="showing">Ingresar Genero</a>
-	<a href="javascript:void(0);" class="showbusc">Lista de Generos</a>
+
+	<div class="userSubmenu">
+		<a href="javascript:void(0);" class="showing">Ingresar Genero</a>
+		<a href="javascript:void(0);" class="showbusc">Lista de Generos</a>
+	</div>
+
 	<div class="ing">
 		<?php
 		$attributes = array('class' => 'validar form-horizontal','id' => 'validar_ingresar_genero');

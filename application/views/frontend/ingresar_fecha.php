@@ -1,7 +1,7 @@
 <div class="fechasbg dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
 	<section id="ingresar-fecha">
 
-	<div class="fechamenu">
+	<div class="userSubmenu">
 		<a href="javascript:void(0);" class="showing">Ingresar</a>
 		<a href="javascript:void(0);" class="showbusc">Buscar</a>
 	</div>
@@ -59,6 +59,7 @@
 
         ?>
 
+        <div class="ingbandasdiv1">
         <div class="nombre-input form-group">
         <?php
         echo form_label('Nombre', 'nombre', $attrlabel);
@@ -92,46 +93,48 @@
 		</div>
 
 		</div>
-
+		</div>
 
 		<input type="hidden" name="idsbandas" class="idsbandas" value="">
 
 		</div>
         
-        <div class="lugar-input form-group">
-        <?php
-        echo form_label('Lugar', 'lugar', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		echo form_dropdown('lugar', $lug, set_value('lugar'));
-		echo "</div>";
-		echo form_error('lugar');
-		?>
-		</div>
+        <div class="lugarfechahora">
+	        <div class="lugar-input form-group">
+	        <?php
+	        echo form_label('Lugar', 'lugar', $attrlabel);
+	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			echo form_dropdown('lugar', $lug, set_value('lugar'));
+			echo "</div>";
+			echo form_error('lugar');
+			?>
+			</div>
 
-		<div class="fecha-input form-group">
-        <?php
-        echo form_error('check_database');
-        echo form_label('Fecha', 'fecha', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		echo form_input($fecha);
-		echo "</div>";
-		echo form_error('fecha');
-		?>
-		</div>
+			<div class="fecha-input form-group">
+	        <?php
+	        echo form_error('check_database');
+	        echo form_label('Fecha', 'fecha', $attrlabel);
+	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			echo form_input($fecha);
+			echo "</div>";
+			echo form_error('fecha');
+			?>
+			</div>
 
-		<div class="input-group hora-input clockpicker form-group">
-        <?php
-        echo form_label('Hora', 'hora', $attrlabel);
-        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		echo form_input($hora);
-		echo "</div>";
-		echo form_error('hora');
-		?>
+			<div class="input-group hora-input clockpicker form-group">
+	        <?php
+	        echo form_label('Hora', 'hora', $attrlabel);
+	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			echo form_input($hora);
+			echo "</div>";
+			echo form_error('hora');
+			?>
+			
+			</div>
+		</div>
 		
-		</div>
-
-		<?php echo form_label('Imagen fecha', 'userfileing', $attrlabel); ?>
 		<div class="imgfile-input form-group inputs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<?php echo form_label('Imagen fecha', 'userfileing', $attrlabel); ?>
 			<input type="file" name="userfile" id="userfile" size="20" />
 		</div>
 

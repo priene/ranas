@@ -41,13 +41,13 @@
 	            <!--<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/servicios', 'Servicios', 'class="navico proximasIco"', 'title="Servicios"'); ?></li>-->
 	        </div>
 	        
-	        <div id="navbarCollapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
+	        <div id="navbarCollapse" class="collapse navbar-collapse wow slideInUp" data-wow-delay="0.5s" aria-expanded="false" style="height: 1px;">
 	            <ul class="nav navbar-nav">
 	                <li class="wow slideInUp" data-wow-delay="1.5s"><?php echo anchor('/inicio', 'Inicio', 'class="navico proximasIco"', 'title="Inicio"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/nosotros', 'Nosotros', 'class="navico proximasIco"', 'title="Nosotros"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1s"><?php echo anchor('/calendario', 'Calendario', 'class="navico proximasIco"', 'title="Calendario"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/bandas', 'Bandas', 'class="navico bandasIco"', 'title="Bandas"'); ?></li>
-					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/registrobanda', 'Registrá tu banda', 'class="navico bandasIco"', 'title="Registrá tu banda"'); ?></li>
+					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/registrobanda', 'Registro', 'class="navico bandasIco"', 'title="Registrá tu banda"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.5s"><?php echo anchor('/contacto', 'Contacto', 'class="navico proximasIco"', 'title="Contacto"'); ?></li>
 	            </ul>
 	        </div>

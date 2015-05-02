@@ -1,8 +1,11 @@
 <div class="lugarbg dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12 users">
 	<section id="ingresar-lugar">
-	<h2>Lugar</h2>
-	<a href="javascript:void(0);" class="showing">Ingresar Lugar</a>
-	<a href="javascript:void(0);" class="showbusc">Buscar Lugar</a>
+
+	<div class="userSubmenu">
+		<a href="javascript:void(0);" class="showing">Ingresar Lugar</a>
+		<a href="javascript:void(0);" class="showbusc">Buscar Lugar</a>
+	</div>
+	
 	<div class="ing">
 		<?php
 		

@@ -38,13 +38,13 @@
 	            <!--<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/servicios', 'Servicios', 'class="navico proximasIco"', 'title="Servicios"'); ?></li>-->
 	        </div>
 	        
-	        <div id="navbarCollapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
+	        <div id="navbarCollapse" class="collapse navbar-collapse wow slideInUp" data-wow-delay="0.1s" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
 	            <ul class="nav navbar-nav">
 	                <li class="wow slideInUp" data-wow-delay="1.5s"><?php echo anchor('/inicio', 'Inicio', 'class="navico proximasIco"', 'title="Inicio"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/nosotros', 'Nosotros', 'class="navico proximasIco"', 'title="Nosotros"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1s"><?php echo anchor('/calendario', 'Calendario', 'class="navico proximasIco"', 'title="Calendario"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/bandas', 'Bandas', 'class="navico bandasIco"', 'title="Bandas"'); ?></li>
-					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/registrobanda', 'Registrá tu banda', 'class="navico bandasIco"', 'title="Registrá tu banda"'); ?></li>
+					<li class="wow slideInUp" data-wow-delay="1.25s"><?php echo anchor('/registrobanda', 'Registro', 'class="navico bandasIco"', 'title="Registrá tu banda"'); ?></li>
 					<li class="wow slideInUp" data-wow-delay="1.5s"><?php echo anchor('/contacto', 'Contacto', 'class="navico proximasIco"', 'title="Contacto"'); ?></li>
 	            </ul>
 	        </div>
@@ -52,8 +52,8 @@
 
 	<div class="contenedor users menulogin">
 
-	<div class="navuser col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<div id="navbarCollapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
+	<div class="navuser col-lg-12 col-md-12 col-sm-12 col-xs-12 wow slideInDown" data-wow-delay="0.5s"	>
+		<div id="navbarCollapse" class="collapse navbar-collapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/menulogin', 'Dashboard', 'class="navico proximasIco"', 'title="Dashboard"'); ?></li>
 				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Fechas', 'class="navico proximasIco"', 'title="Ingresar Fecha"'); ?></li>
