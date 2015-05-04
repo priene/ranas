@@ -9,7 +9,15 @@
 
 
 body{
-	background-color: #000000 !important;
+	background: rgb(25,25,25); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%, rgba(22,22,22,1) 51%, rgba(0,0,0,1) 97%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(25,25,25,1)), color-stop(51%,rgba(22,22,22,1)), color-stop(97%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
   color: #FFFFFF;
 	font-family: 'Montserrat Alternates', sans-serif;
   height:100%;
@@ -31,6 +39,10 @@ input{
 p{
 	color: #989898;
 	font-size: 0.8em;
+}
+
+input[type=radio]{
+  opacity: 0.6;
 }
 
 ul{
@@ -121,7 +133,6 @@ nav{
 .nav li a{
   height: 50px;
   /*border-top: 1px solid #F90000;*/
-  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .nav li{
@@ -131,9 +142,6 @@ nav{
   /*background-color: #171411; #9B0000*/
   margin: -3px;
 }
-
-
-
 
 .navbar-brand{
   width: 10%;
@@ -169,6 +177,7 @@ nav ul li{
 #navbarCollapse{
   border-top: 1px solid #FF0000;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 .fechainfoslider{
@@ -632,15 +641,30 @@ input,textarea,select{
 
 .busc input, .ing input{
   background-color: transparent;
-  color: #A85903;
+  color: #804200;
   border: 0;
-  text-transform: uppercase;
+  /*text-transform: uppercase;
   /* border-top: 1px solid; */
   border-bottom: 1px solid;
   /* border: 0; */
   padding: 0.5em 2.5em;
   margin: 1em 0;
   /* border-radius: 7px; */
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.submit-input:hover{
+  background-color: #FFA500;
+  color: #000000 !important;
+  text-decoration: none;
 }
 
 .form-horizontal .form-group{
@@ -683,14 +707,13 @@ input[name="imgslider"]{
 .resul th, .tablabandas th, .listgeneros th{
   display: table-cell;
   font-style: bold;
-  color: #ffffff;
+  color: rgba(255, 0, 0, 0.47);
 } 
 
 .resul th, .listgeneros th{
-  background-color: #AB1E22;
+  background: rgba(246, 246, 246, 0.03);
   padding: 10px;
 }
-
 
 .tablabandas th{
   padding: 5px;
@@ -751,7 +774,7 @@ form .inputs{
 }
 
 .error p{
-  color: #FFFFFF;
+  color: #D70000;
 }
   
 #dialog ul{
@@ -759,6 +782,96 @@ form .inputs{
   text-align: center;
 }
 
+.divBlockbandas{
+  display: block;
+  margin: 1.5em 0;
+}
+
+.provincia-input, .pais-input, .localidad-input{
+  max-width: 215px;
+  display: inline-block !important;
+}
+
+.form-control{
+  width: 100%;
+  max-width: 300px;
+  min-height: 45px;
+  display: block;
+  float: none;
+  padding: 0.5em 1em;
+  margin: 0.5em auto;
+  /* text-align: center; */
+  color: #5A5A5A;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.RadioDivIngBand{
+  margin: 1em 0 3em 0;
+}
+
+.RadioDivIngBand div label, .RadioDivIngBand div, .RadioDivIngBand label{
+  display: inline-block !important;
+}
+
+.labeltitle{
+  min-width: 350px;
+}
+
+.otrocontacto{
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+  margin: 0 5px 0 5px !important;
+}
+
+.media{
+  margin: 0 1.5em;
+  display: inline-block;
+}
+
+.media input, .media label{
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.media input{
+  width: auto !important;
+}
+
+input.radiomedia{
+  min-width: 22px !important;
+  min-height: 22px !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  vertical-align: middle;
+}
+
+.media .inputs, .media label{
+  max-width: 360px !important;
+}
+
+.media .inputs label{
+  margin: 0 1em;
+}
+
+.media div{
+  text-align: left;
+}
 
 /* FOOTER */
 
@@ -923,7 +1036,7 @@ footer{
 .navuser p{
   color: #FF0000;
 } 
-
+  
 .highcharts-background{
   fill: transparent;
  }
@@ -1025,17 +1138,21 @@ tspan {
 
 }
 
+.navuser #navbarCollapse {
+  border-top: none;
+}
+
 /*------------- NAV USERS ---------------*/
 /*-------------    FIN    ---------------*/
 
 /*----------- INGRESAR FECHA ------------*/
 
-.fechasbg{
+/*.fechasbg{
   background-image: url("../img/fechasbg2.png");
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
-}
+}*/
 
 .userSubmenu{
   width: 75%;
@@ -1085,7 +1202,8 @@ tspan {
   margin: 0 auto;
   max-width: 300px;
   text-align: left;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(234, 234, 234, 0.61);
+  font-weight: normal;
 }
 
 .inputs{
@@ -1100,11 +1218,11 @@ tspan {
 .inputs input{
   margin: 0.5em 0;
   width: 100%;
+  min-height: 45px;
   background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.33);
+  border: 1px solid #5A5A5A;
   padding: 0.75em 1.25em;
   border-radius: 4px;
-  color: rgba(255, 255, 255, 0.65);
   -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
   -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
   -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
@@ -1119,7 +1237,20 @@ tspan {
   transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
+.inputs input:valid{
+  color: #FFA500;
+}
+
+.inputs input:invalid{
+    color: #5A5A5A;
+}
+
 .inputs input:focus{
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+.inputs select:focus{
   border: 1px solid #FFA500;
   color: #FFA500;
 }
@@ -1166,13 +1297,14 @@ tspan {
   margin: 2em 0;
 }
 
-.lugar-input select{
+select{
   width: 100%;
   max-width: 300px;
+  min-height: 45px;
   display: block;
   float: none;
-  padding: 0.75em 1em;
-  margin: 1em auto;
+  padding: 0.5em 1em;
+  margin: 0.5em auto;
   /* text-align: center; */
   color: #5A5A5A;
   background-color: transparent;
@@ -1193,9 +1325,10 @@ tspan {
             transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
-.lugar-input option{
-  background-color: black;
+option{
+  background-color: #111111 ;
   padding:0.25em;
+  border:none;
 }
 
 .lugar-input select:focus{
@@ -1209,7 +1342,7 @@ tspan {
 
 .fecha-input, .hora-input{
   width: 130px;
-  margin: 0.5em 0.5em 15px 0.5em !important;
+  margin: 0em 0.5em 15px 0.5em !important;
   display: inline-block;
   }
 
@@ -1228,6 +1361,60 @@ tspan {
 .lugarfechahora{
   margin: 1em 0;
 }
+
+.tieneslider{
+  height: 100% !important;
+  width: 20px !important;
+  margin: 0 1em !important; 
+}
+
+.posicion-slide-input div select{
+  max-width: 208px;
+  font-size: 0.9em;
+}
+
+
+.divimgslider{
+  display: block;
+  margin: 1.5em 0 1.5em 0;
+}
+
+.divimgslider div{
+  display: inline-block;
+}
+
+#imgslider{
+  font-size: 0.9em;
+  outline: none;
+}
+
+#userfile{
+  color: #5A5A5A !important;
+  font-size: 0.9em;
+  outline: none;
+}
+
+input#userfile{
+  outline: none;
+}
+
+.sliderop{
+  display: inline-block;
+  max-width: 160px;
+  height: 93.5px;
+  margin: 0 1em 0 1.5em !important;
+}
+
+.posicion-slide-input{
+  margin: 0 1em;
+}
+
+.sliderop label{
+  height: 100%;
+  vertical-align: middle;
+  line-height: 91px;
+  padding-left: 2em;
+} 
 
 /*----------- INGRESAR FECHA ------------*/
 /*-------------    FIN    ---------------*/
@@ -1272,15 +1459,21 @@ tspan {
 }
 
 .panel {
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    border-color: #337ab7;
-    color: black;
-    margin-bottom: 20px;
+  float: none;
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #337ab7;
+  color: black;
+  margin: 5vh 0;
+  padding: 0;
 }
 
 .bloques{
+  position: fixed;
   overflow: hidden;
+  right: 0;
 }
 
 .text-right{

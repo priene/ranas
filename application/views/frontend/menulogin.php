@@ -35,11 +35,11 @@
 		</li>
 	</ul>
 	
-	<div class="graficos" style="clear:both;">
-		<div id="grafico1" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico2" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico3" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico4" class="chart col-lg-6 col-md-6"></div>
+	<div class="graficos">
+		<div id="grafico1" class="chart col-lg-5 col-md-5"></div>
+		<div id="grafico2" class="chart col-lg-5 col-md-5"></div>
+		<div id="grafico3" class="chart col-lg-5 col-md-5"></div>
+		<div id="grafico4" class="chart col-lg-5 col-md-5"></div>
 	</div>
 </div>
 

@@ -151,20 +151,23 @@
 		echo form_label('Imagen slider', 'imgslidering'); 
 		echo '</div>';
 		?>
-		<div class="imgslider-input form-group inputs col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<input type="file" name="imgslider" id="imgslider" size="20" />
-		</div>
 
-		<div class="posicion-slide-input">
-	        <?php
-	        echo form_label('Posicion slide', 'posicion', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_dropdown('posicion', $pos, set_value('posicion'));
-			echo "</div>";
-			echo form_error('posicion');
-			?>
-		</div>
- 		
+		<div class="divimgslider">
+			<div class="imgslider-input form-group inputs col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<input type="file" name="imgslider" id="imgslider" size="20" />
+			</div>
+
+			<div class="posicion-slide-input">
+		        <?php
+		        /*echo form_label('', 'posicion', $attrlabel);*/
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_dropdown('posicion', $pos, set_value('posicion'));
+				echo "</div>";
+				echo form_error('posicion');
+				?>
+			</div>
+ 		</div>
+
 		<div class="msjinsertarfecha col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 
  		<?php
