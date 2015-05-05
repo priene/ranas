@@ -48,44 +48,52 @@
 
         ?>
 
-        <div class="nombre-input form-group">
-        <?php
-        echo form_label('Nombre', 'nombre', $attrlabel);
-        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
-		echo form_input($nombre);
-		echo "</div>";
-		echo form_error('nombre');
-		?>
-		</div>
+        <div class="divBlockbandas">
 
-		<div class="direccion-input form-group">
-        <?php
-        echo form_label('Direccion', 'direccion', $attrlabel);
-        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
-		echo form_input($direccion);
-		echo "</div>";
-		echo form_error('direccion');
-		?>
-		</div>
+	        <div class="nombre-input form-group">
+	        <?php
+	        echo form_label('Nombre', 'nombre', $attrlabel);
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
+			echo form_input($nombre);
+			echo "</div>";
+			echo form_error('nombre');
+			?>
+			</div>
 
-		<div class="telefono-input form-group">
-        <?php
-        echo form_label('Telefono', 'telefono', $attrlabel);
-        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
-		echo form_input($telefono);
-		echo "</div>";
-		echo form_error('telefono');
-		?>
-		</div>
+			<div class="direccion-input form-group">
+	        <?php
+	        echo form_label('Direccion', 'direccion', $attrlabel);
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
+			echo form_input($direccion);
+			echo "</div>";
+			echo form_error('direccion');
+			?>
+			</div>
 
-		<div class="email-input form-group">
-        <?php
-        echo form_label('Email', 'email', $attrlabel);
-        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
-		echo form_input($email);
-		echo "</div>";
-		echo form_error('email');
-		?>
+        </div>
+
+        <div class="divBlockbandas">
+
+			<div class="telefono-input form-group">
+	        <?php
+	        echo form_label('Telefono', 'telefono', $attrlabel);
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
+			echo form_input($telefono);
+			echo "</div>";
+			echo form_error('telefono');
+			?>
+			</div>
+
+			<div class="email-input form-group">
+	        <?php
+	        echo form_label('Email', 'email', $attrlabel);
+	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
+			echo form_input($email);
+			echo "</div>";
+			echo form_error('email');
+			?>
+			</div>
+
 		</div>
 
 		<div class="nombre-contacto-input form-group">

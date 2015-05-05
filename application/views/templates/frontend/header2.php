@@ -55,12 +55,12 @@
 	<div class="navuser col-lg-12 col-md-12 col-sm-12 col-xs-12 wow slideInDown" data-wow-delay="0.5s"	>
 		<div id="navbarCollapse" class="collapse navbar-collapse" class="collapse navbar-collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-                <li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/menulogin', 'Dashboard', 'class="navico proximasIco"', 'title="Dashboard"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Fechas', 'class="navico proximasIco"', 'title="Ingresar Fecha"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_banda', 'Bandas', 'class="navico proximasIco"', 'title="Ingresar Banda"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_lugar', 'Lugares', 'class="navico bandasIco"', 'title="Ingresar Lugar"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_genero', 'Generos', 'class="navico proximasIco"', 'title="Ingresar Genero"'); ?></li>
-				<li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/logout', 'Log-out', 'class="navico proximasIco"', 'title="Cerrar Sesion"'); ?></li>
+                <li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/menulogin', 'Dashboard', 'class="navico dashIco"', 'title="Dashboard"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_fecha', 'Fechas', 'class="navico ingfechaIco"', 'title="Ingresar Fecha"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_banda', 'Bandas', 'class="navico ingbandaIco"', 'title="Ingresar Banda"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.5s"><?php echo anchor('/ingresar_lugar', 'Lugares', 'class="navico inglugarIco"', 'title="Ingresar Lugar"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="0.75s"><?php echo anchor('/ingresar_genero', 'Generos', 'class="navico inggeneroIco"', 'title="Ingresar Genero"'); ?></li>
+				<li class="wow slideInDown" data-wow-delay="1s"><?php echo anchor('/logout', 'Log-out', 'class="navico logoutIco"', 'title="Cerrar Sesion"'); ?></li>
             </ul>
         </div>
 	</div>

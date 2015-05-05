@@ -33,7 +33,7 @@ a{
 }
 
 input{
-	outline: 0;
+	outline: 0 !important;
 }
 
 p{
@@ -1138,9 +1138,50 @@ tspan {
 
 }
 
+
+@media (max-width: 500px) {
+  #navbarCollapse .navico {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .dashIco{
+    background: url("../img/ui_dash.png"), transparent;    
+  }
+
+  .ingfechaIco{
+    background: url("../img/ui_ingfecha.png"), transparent;    
+  }
+
+  .ingbandaIco{
+    background: url("../img/ui_ingband.png"), transparent;    
+  }
+
+  .inglugarIco{
+    background: url("../img/ui_inglugar.png"), transparent;    
+  }
+
+  .inggeneroIco{
+    background: url("../img/ui_dash.png"), transparent;    
+  }  
+
+  .logoutIco{
+    background: url("../img/ui_logout.png"), transparent;    
+  }  
+
+}
+
 .navuser #navbarCollapse {
   border-top: none;
 }
+
+
 
 /*------------- NAV USERS ---------------*/
 /*-------------    FIN    ---------------*/
@@ -1423,10 +1464,17 @@ input#userfile{
 
 
 .lugarbg{
-  background-image: url("../img/lugarbg.jpg");
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
+}
+
+#ingresar-lugar label{
+  width: 100%;
+}
+
+#ingresar-lugar .inputs{
+  width: 100%;
 }
 
 /*---------- INGRESAR LUGAR -------------*/
@@ -1463,11 +1511,11 @@ input#userfile{
   width: 100%;
   /* height: 100%; */
   border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 165, 0, 0.05);
   border-color: #337ab7;
   color: black;
   margin: 5vh 0;
-  padding: 0;
+  padding: 1em;
 }
 
 .bloques{
@@ -1479,31 +1527,33 @@ input#userfile{
 .text-right{
   text-align: right;
   padding: 0 15px 15px;
+  color: #989898;
 }
 
 .panelfooter{
   text-align: left;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   padding: 10px;
+  border-top: 1px solid #C80000;
 }
 
 .panelfooter a{
   text-decoration: none;
-  color: #000000;
+  color: #FFA500;
 }
 
 .panaelnoconfirmados{
-  background-color: #337ab7;
+  /*background-color: #337ab7;*/
   border-color: #337ab7;
 }
 
 .panelnoturno{
-  background-color: #5cb85c;
+  /*background-color: #5cb85c;*/
   border-color: #5cb85c;
 }
 
 .panelnoconvocatoria{
-  background-color: #f0ad4e;
+  /*background-color: #f0ad4e;*/
   border-color: #f0ad4e;
 }
 
@@ -1514,8 +1564,21 @@ input#userfile{
     color: #FFFFFF;
 }
 
+.panaelnoconfirmados .numeropanel{
+  color: #00A8FF;
+}
+
+.panelnoturno .numeropanel{
+  color: #2BFF00;
+}
+
+.panelnoconvocatoria .numeropanel{
+  color: #898FFF;
+}
+
+
 .numeropanel{
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .listgeneros{
