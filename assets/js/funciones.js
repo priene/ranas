@@ -185,9 +185,26 @@ $(document).ready(function() {
 		});
 
 
+	var w = $(window).width();
+        if (w < 992) {
+        	console.log("a");
+            $('.bloques').after($('.graficos'));
+        }else if (w >= 992){
+        	console.log("b");
+        	$('.graficos').after($('.bloques'));
+        }
 
 
-
+	$(window).resize(function() {
+        var w = $(window).width();
+        if (w < 992) {
+        	console.log("a");
+            $('.bloques').after($('.graficos'));
+        }else if (w >= 992){
+        	console.log("b");
+        	$('.graficos').after($('.bloques'));
+        }
+    });
 
 
 
@@ -584,10 +601,12 @@ $(document).ready(function() {
 			$(".imgslider-input").show();
 			$("input[name='imgslider']").show();
 			$(".posicion-slide-input").show();
+			$("select[name='posicion']").show();
 		}else{
 			$(".imgslider-input").hide();
 			$("input[name='imgslider']").hide();
 			$(".posicion-slide-input").hide();
+			$("select[name='posicion']").hide();
 		}
 	});
 

@@ -1,13 +1,13 @@
 <div class="dashboard col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	
-	<div class="graficos col-lg-10 col-md-10">
-		<div id="grafico1" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico2" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico3" class="chart col-lg-6 col-md-6"></div>
-		<div id="grafico4" class="chart col-lg-6 col-md-6"></div>
+	<div class="graficos col-lg-10 col-md-9 col-sm-12 col-xs-12">
+		<div id="grafico1" class="chart col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+		<div id="grafico2" class="chart col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+		<div id="grafico3" class="chart col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+		<div id="grafico4" class="chart col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
 	</div>
 
-	<ul class="bloques col-lg-2 col-md-2">
+	<ul class="bloques col-lg-2 col-md-3 col-sm-12 col-xs-12">
 		<li class="panel">
 			<div class="panaelnoconfirmados panelheader">
 				<div class="text-right">

@@ -99,7 +99,7 @@
 		<div class="nombre-contacto-input form-group">
         <?php
         echo form_label('Contacto', 'nombre_contacto', $attrlabel);
-        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
+        echo "<div class='col-lg-12 col-md-12 col-sm-6 col-xs-12 inputs'>";
 		echo form_input($nombre_contacto);
 		echo "</div>";
 		echo form_error('nombre_contacto');
