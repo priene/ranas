@@ -955,7 +955,7 @@ $(document).ready(function() {
 				pepe.append("<option value='" + value.id + "'>" + value.nombre + "</option>");
 				
 			});
-			$(this).parent().parent().next().show();
+			$(this).parent().parent().next().css("display","inline-block");
 
 		});
 	});
