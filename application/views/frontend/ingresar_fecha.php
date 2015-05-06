@@ -186,9 +186,9 @@
 
 			$crit = array(
 				''	=> 'Seleccione criterio',	
-				'fecha'   => 'fecha',
-				'nombre'  => 'nombre',
-				'lugar'		=> 'lugar'
+				'fecha'   => 'Fecha',
+				'nombre'  => 'Nombre',
+				'lugar'		=> 'Lugar'
             );
 
 
