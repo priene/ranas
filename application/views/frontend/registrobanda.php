@@ -101,91 +101,97 @@
 			);
 
 			$attrlabel = array(
-        		'class'	=>	'col-lg-6 col-md-6 col-sm-6 col-xs-12'
+        		'class'	=>	'col-lg-12 col-md-12 col-sm-12 col-xs-12'
     		);
 
 	        ?>
-
-	        <div class="nombre-input form-group">
-	        <?php
-	        echo form_label('Nombre', 'nombre', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_input($nombre);
-			echo "</div>";
-			echo form_error('nombre');
-			?>
-			</div>
-	        
-	        <div class="genero-input form-group">
-	        <?php
-	        echo form_label('Genero', 'genero', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_dropdown('genero', $gen, set_value('genero'));
-			echo "</div>";
-			echo form_error('genero');
-			?>
-			</div>
-
-	        <div class="pais-input form-group">
-	        <?php
-	        echo form_label('Pais', 'pais', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_dropdown('pais', $ps, '12');
-			echo "</div>";
-			echo form_error('pais');
-			?>
+			
+			<div class="divBlockbandas">
+		        <div class="nombre-input form-group">
+		        <?php
+		        echo form_label('Nombre', 'nombre', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_input($nombre);
+				echo "</div>";
+				echo form_error('nombre');
+				?>
+				</div>
+		        
+		        <div class="genero-input form-group">
+		        <?php
+		        echo form_label('Genero', 'genero', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_dropdown('genero', $gen, set_value('genero'));
+				echo "</div>";
+				echo form_error('genero');
+				?>
+				</div>
 			</div>
 
-	        <div class="provincia-input form-group">
-	        <?php
-	        echo form_label('Provincia', 'provincia', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_dropdown('provincia', $prov, set_value('provincia'));
-			echo "</div>";
-			echo form_error('provincia');
-			?>
+			<div class="divBlockbandas">
+		        <div class="pais-input form-group">
+		        <?php
+		        echo form_label('Pais', 'pais', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_dropdown('pais', $ps, '12');
+				echo "</div>";
+				echo form_error('pais');
+				?>
+				</div>
+
+		        <div class="provincia-input form-group">
+		        <?php
+		        echo form_label('Provincia', 'provincia', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_dropdown('provincia', $prov, set_value('provincia'));
+				echo "</div>";
+				echo form_error('provincia');
+				?>
+				</div>
+
+		        <div class="localidad-input form-group">
+		        <?php
+		        echo form_label('Localidad', 'localidad', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs lcl'>";
+				echo "</div>";
+				echo form_error('localidad');
+				?>
+				</div>
 			</div>
 
-	        <div class="localidad-input form-group">
-	        <?php
-	        echo form_label('Localidad', 'localidad', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs lcl'>";
-			echo "</div>";
-			echo form_error('localidad');
-			?>
+			<div class="divBlockbandas">
+				<div class="nombre-contacto-input form-group">
+		        <?php
+		        echo form_label('Nombre de contacto', 'nombre-contacto', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_input($nombre_contacto);
+				echo "</div>";
+				echo form_error('nombre_contacto');
+				?>
+				</div>
+
+				<div class="tel-contacto-input form-group">
+		        <?php
+		        echo form_label('Telefono de contacto', 'telefono-contacto', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_input($tel_contacto);
+				echo "</div>";
+				echo form_error('tel_contacto');
+				?>
+				</div>
+
+				<div class="contacto-input form-group">
+		        <?php
+		        echo form_label('Email o Facebook de Contacto', 'contacto', $attrlabel);
+		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+				echo form_input($contacto);
+				echo "</div>";
+				echo form_error('contacto');
+				?>
+				</div>
 			</div>
 
-			<div class="nombre-contacto-input form-group">
-	        <?php
-	        echo form_label('Nombre de contacto', 'nombre-contacto', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_input($nombre_contacto);
-			echo "</div>";
-			echo form_error('nombre_contacto');
-			?>
-			</div>
-
-			<div class="tel-contacto-input form-group">
-	        <?php
-	        echo form_label('Telefono de contacto', 'telefono-contacto', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_input($tel_contacto);
-			echo "</div>";
-			echo form_error('tel_contacto');
-			?>
-			</div>
-
-			<div class="contacto-input form-group">
-	        <?php
-	        echo form_label('Email o Facebook de Contacto', 'contacto', $attrlabel);
-	        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-			echo form_input($contacto);
-			echo "</div>";
-			echo form_error('contacto');
-			?>
-			</div>
-
-			<div>
+			<div class="RadioDivIngBand">
 				<label>¿Desea ingresar otro contacto de la banda?</label>
 				<input type="radio" name="otrocontacto" class="otrocontacto" value="no" checked="checked"><label for="otrocontacto">NO</label>
 				<input type="radio" name="otrocontacto" class="otrocontacto" value="si"><label for="otrocontacto">SI</label>
@@ -224,57 +230,60 @@
 			</div>
 
 			
+			<div class="divBlockbandas">
+				<div class="sitioweb media">
+					<?php
+			        echo form_label('Sitio Web', 'sitioweb', $attrlabel);
+			        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			        
+					echo '<input type="radio" name="swradio" class="radiomedia" value="no" checked="checked"><label for="swradio">NO</label>';
+					echo '<input type="radio" name="swradio" class="radiomedia" value="si"><label for="swradio">SI</label>';
+					echo form_input($sitioweb);
+					echo "</div>";
+					echo form_error('sitioweb');
+					?>
+				</div>
 
-			<div class="sitioweb media">
-				<?php
-		        echo form_label('Sitio Web', 'sitioweb', $attrlabel);
-		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		        
-				echo '<input type="radio" name="swradio" class="radiomedia" value="no" checked="checked"><label for="swradio">NO</label>';
-				echo '<input type="radio" name="swradio" class="radiomedia" value="si"><label for="swradio">SI</label>';
-				echo form_input($sitioweb);
-				echo "</div>";
-				echo form_error('sitioweb');
-				?>
+				<div class="soundcloud media">
+					<?php
+			        echo form_label('Soundcloud', 'soundcloud', $attrlabel);
+			        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			        
+					echo '<input type="radio" name="scradio" class="radiomedia" value="no" checked="checked"><label for="scradio">NO</label>';
+					echo '<input type="radio" name="scradio" class="radiomedia" value="si"><label for="scradio">SI</label>';
+					echo form_input($soundcloud);
+					echo "</div>";
+					echo form_error('soundcloud');
+					?>
+				</div>
 			</div>
 
-			<div class="soundcloud media">
-				<?php
-		        echo form_label('Soundcloud', 'soundcloud', $attrlabel);
-		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		        
-				echo '<input type="radio" name="scradio" class="radiomedia" value="no" checked="checked"><label for="scradio">NO</label>';
-				echo '<input type="radio" name="scradio" class="radiomedia" value="si"><label for="scradio">SI</label>';
-				echo form_input($soundcloud);
-				echo "</div>";
-				echo form_error('soundcloud');
-				?>
-			</div>
+			<div class="divBlockbandas">
+				<div class="bandcamp media">
+					<?php
+			        echo form_label('Bandcamp', 'bandcamp', $attrlabel);
+			        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			        
+					echo '<input type="radio" name="bcradio" class="radiomedia" value="no" checked="checked"><label for="bcradio">NO</label>';
+					echo '<input type="radio" name="bcradio" class="radiomedia" value="si"><label for="bcradio">SI</label>';
+					echo form_input($bandcamp);
+					echo "</div>";
+					echo form_error('bandcamp');
+					?>
+				</div>
 
-			<div class="bandcamp media">
-				<?php
-		        echo form_label('Bandcamp', 'bandcamp', $attrlabel);
-		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		        
-				echo '<input type="radio" name="bcradio" class="radiomedia" value="no" checked="checked"><label for="bcradio">NO</label>';
-				echo '<input type="radio" name="bcradio" class="radiomedia" value="si"><label for="bcradio">SI</label>';
-				echo form_input($bandcamp);
-				echo "</div>";
-				echo form_error('bandcamp');
-				?>
-			</div>
-
-			<div class="youtube media">
-				<?php
-		        echo form_label('Youtube', 'youtube', $attrlabel);
-		        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
-		        
-				echo '<input type="radio" name="ytradio" class="radiomedia" value="no" checked="checked"><label for="ytradio">NO</label>';
-				echo '<input type="radio" name="ytradio" class="radiomedia" value="si"><label for="ytradio">SI</label>';
-				echo form_input($youtube);
-				echo "</div>";
-				echo form_error('youtube');
-				?>
+				<div class="youtube media">
+					<?php
+			        echo form_label('Youtube', 'youtube', $attrlabel);
+			        echo "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 inputs'>";
+			        
+					echo '<input type="radio" name="ytradio" class="radiomedia" value="no" checked="checked"><label for="ytradio">NO</label>';
+					echo '<input type="radio" name="ytradio" class="radiomedia" value="si"><label for="ytradio">SI</label>';
+					echo form_input($youtube);
+					echo "</div>";
+					echo form_error('youtube');
+					?>
+				</div>
 			</div>
 			
 			<input type="hidden" name="turno" value="1">
