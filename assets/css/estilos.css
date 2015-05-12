@@ -200,13 +200,22 @@ nav ul li{
   /*border-bottom-color: #201D19;
   /*order-top: 0;*/
   /*border-left-color: #CFA029;*/
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(44, 0, 0, 0.9);
   text-transform: uppercase;
 }
 
 .fechainfoslider{
   font-family: "Dimitri";
 }
+
+/*.fechainfoslider h2{
+  color: #FEC100;
+  margin: 0;
+  font-size: 5em;
+  padding-top: 10px;
+  letter-spacing: 2px;
+}
+*/
 
 .fechainfoslider h2{
   color: #FEC100;
@@ -215,6 +224,7 @@ nav ul li{
   /* height: 90px; */
   padding-top: 10px;
   letter-spacing: 2px;
+  
 }
 
 .fechainfoslider p{
@@ -296,6 +306,10 @@ nav ul li{
   margin: 0;
 }
 
+#da-thumbs{
+  margin: 0 1em;
+}
+
 /* INFO AGENDA */
 
 
@@ -368,44 +382,102 @@ nav ul li{
   height: 100vh;
   text-align: left;
   position: relative;
-  overflow: visible;
-  background-image: url("../img/navbg.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #nosotros p{
   color: #F9BC20;
 }
 
+.nosotrosContent{
+  height: 100%;
+  /* display: table; */
+  text-align: center;
+  width: 100%;
+  background-image: url("../img/navbg.gif");
+  background-size: cover;
+}
+
 .infonos{
-  height: 70%;
-  width: 75%;
-  position: absolute;
+  width: 100%;
   margin: 0 auto;
-  padding: 2em 25%;
-  top: 35%;
-  background-color: rgba(0, 0, 0, 0.9);
+  /* padding: 2em 25%; */
+  /* background-color: rgba(0, 0, 0, 0.9); */
   font-size: 1.15em;
   line-height: 1.45em;
-  text-align: left;
-  border-radius: 50%;
+  text-align: center;
+}
+
+.row1{
+  border-top: 100vh solid rgba(0, 0, 0, 0.9);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+  /* background-image: url("../img/navbg.gif"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
+.row2{
+  margin: 0 auto;
+  width: 30%;
+  font-size: 1.25em;
+  /* padding: 2em; */
+  position: absolute;
+  /* display: inline-block; */
+  /* right: 50%; */
+  left: 35%;
 }
 
 .nosotrosRanaroja{
   width: 100%;
-  height: 470px;
-  top:0;
+  height: 100%;
+  bottom: 0;
   position:absolute;
-  background-image: url("../img/nosotros.png");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.pataizq{
+  width: 500px;
+  height: 100vh;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataizquierda.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: 100;
+}
+
+.selloRana{
+  background-image: url("../img/selloRana.png");
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.patader{
+  width: 400px;
+  height: 100vh;
+  right: 0; 
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataderecha.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
   z-index: 100;
 }
 
 /* CALENDARIO */
 
 #calendario{
+    overflow-y: scroll;
     background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.27) 59%, rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(59%,rgba(0,0,0,0.27)), color-stop(100%,rgba(0,0,0,0.62))), url("../img/pattern1.png") no-repeat !important;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.27) 59%,rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
@@ -533,7 +605,7 @@ input,textarea,select{
 /* BANDAS */
 
 #bandas .banda{
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     width: 100% !important;
     margin: 0;
@@ -570,7 +642,12 @@ input,textarea,select{
   font-family: "Dimitri";
   letter-spacing: 1.5px;
   margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+
 
 .banda .infototalbanda p{
   font-size: 0.75em;
@@ -601,8 +678,31 @@ input,textarea,select{
   /*float: left;*/
 }
 
+#banda1{
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda2{
+  background-position: center;
+background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+}
+
 #bandas > div:nth-of-type(1) > div:nth-of-type(2) {
-    background: url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 90vh;
     position:absolute;
@@ -610,10 +710,12 @@ input,textarea,select{
     top:0px;
     width:100%;
     min-width: 960px;
+
 }
 
+
+
 #bandas > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
@@ -622,6 +724,7 @@ input,textarea,select{
     width:100%;   
     min-width: 960px;
 }
+
 
 #bandas > div:nth-of-type(3) > div:nth-of-type(2)  {
     background: url("../img/bandas3.jpg") 50% 0 no-repeat fixed;
@@ -890,6 +993,7 @@ footer{
   bottom: 0;
   /* margin-top: -115px !important; */
   padding-bottom: 55px;
+  z-index: 100;
 }
 
 .linksfooter{
@@ -916,7 +1020,7 @@ footer{
 }
 
 .linksfooter a:hover{
-  opacity: 0.25;
+  opacity: 0.55;
 }
 
 .mediaplayer {
@@ -1081,6 +1185,8 @@ div#grafico3 path {
 div#grafico4 path {
   stroke: transparent;
 }
+
+
 
 
 svg {
@@ -1466,7 +1572,7 @@ input#userfile{
 .sliderop label{
   height: 100%;
   vertical-align: middle;
-  padding-top: 20px;
+  padding-top: 35px;
   padding-left: 2em;
 } 
 
@@ -1526,6 +1632,18 @@ input#userfile{
   color: black;
   margin: 5vh 0;
   padding: 1em;
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+   -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+        transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+ -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.panel:hover{
+  background-color: rgba(255, 165, 0, 0.10);
 }
 
 .bloques{
@@ -1742,8 +1860,18 @@ input#userfile{
 
 
 
+@media (max-width: 767px) {
+    .fechainfoslider p {
+        margin: 0;
+        font-size: 1.5em;
+    }
 
-@media (max-width: 767px) {}
+    .fechainfoslider h2 {
+        font-size: 4em;
+    }
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {}
 @media (min-width: 992px) and (max-width: 1199px) {
 
