@@ -18,8 +18,8 @@
 							
 							<li>
 								<div class="fechainfoslider">
-								<h2 class="wow fadeInLeftBig"><?= $infofechaslider[$i]["fecnom"] ?></h2>
-								<p class="wow fadeInRightBig"><?= $infofechaslider[$i]["lugnom"] ?> - <?= strftime("%A %d de %B",strtotime($infofechaslider[$i]["dia"])) ?> <?= substr($infofechaslider[$i]["hora"],0,-3) ?>HS</p>
+									<h2 class="wow fadeInLeftBig titulosDestacados"><?= $infofechaslider[$i]["fecnom"] ?></h2>
+									<p class="wow fadeInRightBig"><?= $infofechaslider[$i]["lugnom"] ?> - <?= strftime("%A %d de %B",strtotime($infofechaslider[$i]["dia"])) ?> <?= substr($infofechaslider[$i]["hora"],0,-3) ?>HS</p>
 								</div>
 								<img src="<?= base_url("assets/img/slider/$slider") ?>">
 							</li>
@@ -32,8 +32,8 @@
 	
 <div class="agenda">
 	<div class="agendaTitulo">
-		<h2 class="wow fadeInLeftBig">PRÓXIMAS</h2>
-		<h2 class="wow fadeInRightBig">FECHAS</h2>
+		<h2 class="wow fadeInLeftBig titulosDestacados">PRÓXIMAS</h2>
+		<h2 class="wow fadeInRightBig titulosDestacados">FECHAS</h2>
 	</div>
 
 	<div class="row da-thumbs" id="da-thumbs">

@@ -69,6 +69,19 @@ table{
 }
 
 
+/*TITULOS*/
+
+.titulosDestacados{
+  font-size: 4em;
+  font-family: "Dimitri";
+  letter-spacing: 1.5px;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+}
+
+
 /* CENTRADO DEL SLIDER EN MITAD DE PANTALLA */
 
   .contenedorCell{
@@ -191,7 +204,11 @@ nav ul li{
   /*left: 10%;*/
 }
 
-.fechainfoslider h2, .fechainfoslider p{
+.fechainfoslider{
+  background-color: rgba(44, 0, 0, 0.9);
+}
+
+.fechainfoslider p,.fechainfoslider h2{
   text-align: center;
   /*padding-left: 15%;*/
   /*background-color: #FFFFFF;*/
@@ -200,7 +217,7 @@ nav ul li{
   /*border-bottom-color: #201D19;
   /*order-top: 0;*/
   /*border-left-color: #CFA029;*/
-  background-color: rgba(44, 0, 0, 0.9);
+ 
   text-transform: uppercase;
 }
 
@@ -1602,7 +1619,7 @@ input#userfile{
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
 #calendario{
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 
 .dashboard, #registrobanda{

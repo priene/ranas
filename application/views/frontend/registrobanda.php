@@ -1,6 +1,6 @@
 <div class="contenedor">
 <section id="registrobanda">
-		<h2>Registra tu banda</h2>
+		<h2 class="titulosDestacados">Registra tu banda</h2>
 		
 			<?php
 			$attributes = array('class' => 'validar form-horizontal','id' => 'validar_ingresar_banda');
