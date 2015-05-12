@@ -187,7 +187,24 @@ nav ul li{
 }
 
 .navbar-toggle{
-  background-color: #DDD;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #FF0000;
+  float: none;
+  margin: 15px;
+  padding: 0;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 19px;
+  margin: 0 auto;
+  height: 2px;
+  border-radius: 1px;
+  border-color: red;
+  color: red;
+  border: solid 1px;
 }
 
 #navbarCollapse{
@@ -195,6 +212,7 @@ nav ul li{
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.95);
 }
+
 
 .fechainfoslider{
   width: 100vw;
@@ -205,7 +223,7 @@ nav ul li{
 }
 
 .fechainfoslider{
-  background-color: rgba(44, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .fechainfoslider p,.fechainfoslider h2{
@@ -316,7 +334,7 @@ nav ul li{
 }
 
 .agendaTitulo{
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
 .agendaTitulo h2{
@@ -348,7 +366,8 @@ nav ul li{
 }
 
 .da-thumbs .dtli a div {
-  background-image: url("../img/pattern1.png");
+  background-color: rgba(15, 15, 15, 0.97);
+  /*background-image: url("../img/pattern2.png");*/
   background-attachment: fixed;
   position: absolute;
 
@@ -362,7 +381,7 @@ nav ul li{
 }
 
 .da-thumbs .dtli .fecha-agenda{
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #EAEAEA;
 }
 
@@ -508,10 +527,12 @@ nav ul li{
 
 .linkscalendario{
   margin: 0 auto;
+  height: 37px;
   width: 75%;
   display: inline-block;
   text-align: right;
-  padding: 1em 1em;
+  /* padding: 1em 1em; */
+  vertical-align: bottom;
 }
 
 .filtros{
@@ -519,24 +540,38 @@ nav ul li{
 }
 
 .fechas{
+  height: 80px;
   border-bottom: 1px solid #FF0000;
 }
 
 .fechas h2, #registrobanda h2{
-  height: 83px;
+  height: 65px;
   display: inline-block;
   font-family: "Dimitri";
   color: #FEC100;
   font-size: 4em;
-  letter-spacing: 2px;  
-  margin:0;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .fechas a{
-
-  padding: 0.25em;
+  text-decoration: none;
+  padding: 26px 2em;
   font-size: 1.25em;
   color: #F90000;
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fechas a:hover{
+  background-color: #F90000;
+  color: #000000;
 }
 
 .itemcal{
@@ -662,6 +697,7 @@ input,textarea,select{
   background: -webkit-linear-gradient(#FFCB00, #C04200);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  line-height: 90px;
 }
 
 
@@ -696,6 +732,7 @@ input,textarea,select{
 }
 
 #banda1{
+  background-size: contain;
   background-position: center;
   background: rgba(76,76,76,0);
   background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
@@ -708,8 +745,9 @@ input,textarea,select{
 }
 
 #banda2{
+  background-size: contain;
   background-position: center;
-background: rgba(76,76,76,0);
+  background: rgba(76,76,76,0);
   background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
   background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
@@ -717,6 +755,19 @@ background: rgba(76,76,76,0);
   background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
   background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda3{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
 }
 
 #bandas > div:nth-of-type(1) > div:nth-of-type(2) {
@@ -744,7 +795,6 @@ background: rgba(76,76,76,0);
 
 
 #bandas > div:nth-of-type(3) > div:nth-of-type(2)  {
-    background: url("../img/bandas3.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
@@ -1273,7 +1323,7 @@ tspan {
 
 @media (max-width: 500px) {
   #navbarCollapse .navico {
-    background-size: contain;
+    background-size: 50%  ;
     background-repeat: no-repeat;
     background-position: center center;
     font-size: 0;
@@ -1622,8 +1672,12 @@ input#userfile{
   /*margin-top: 50px;*/
 }
 
-.dashboard, #registrobanda{
-  margin: 80px 0;
+#registrobanda{
+  margin: 30px 0;
+}
+
+.dashboard{
+  margin: 50px 0;
 }
 
 .contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar, .repetir{
@@ -1884,6 +1938,17 @@ input#userfile{
 
     .fechainfoslider h2 {
         font-size: 4em;
+    }
+
+    .linkscalendario {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .fechas a{
+      padding: 0.25em 2em;
+      font-size: 0.85em;
     }
 }
 

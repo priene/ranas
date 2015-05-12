@@ -2,7 +2,7 @@
 	
 	<div class="filtros">
 		<div class="fechas">
-			<h2>FECHAS</h2>
+			<h2 class="titulosDestacados">FECHAS</h2>
 			<div class="linkscalendario">
 				<a class="calendario_criterio" href="home/calendario_criterio/todas">TODAS</a>
 				<a class="calendario_criterio" href="home/calendario_criterio/hoy">HOY</a>
