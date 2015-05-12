@@ -875,7 +875,6 @@ $(document).ready(function() {
 
 
 
-
 	// Filtro de Calendario de fechas
 
 	$(".calendario_criterio").click(function(e){
@@ -897,7 +896,7 @@ $(document).ready(function() {
 
 						//rutaimgs = "http://www.ranasrojas.com.ar"; //Esto va en PRD
 
-						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia + " - " + value.hora + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
+						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia.substr(8,2) + "-" + value.dia.substr(5,2) + "-" + value.dia.substr(0,4) + " - " + value.hora.substr(0,5) + " hs" + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
 					});
 				}
 				else{
@@ -908,6 +907,7 @@ $(document).ready(function() {
 
 		return false;
 	});
+
 
 
 
@@ -1333,9 +1333,11 @@ $(document).ready(function() {
 	$.datepicker.setDefaults($.datepicker.regional['es']);
 	
 	$(function(){
+
     	$("#ingresar-fecha-fecha").datepicker({
     		dateFormat: "dd-mm-yy"
     	});
+
   	});
 
 	// Animsition

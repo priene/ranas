@@ -505,7 +505,7 @@ nav ul li{
   border-bottom: 1px solid #FF0000;
 }
 
-.fechas h2{
+.fechas h2, #registrobanda h2{
   height: 83px;
   display: inline-block;
   font-family: "Dimitri";
@@ -752,7 +752,7 @@ background: rgba(76,76,76,0);
   display: block;
 }
 
-.busc input, .ing input, .mod input{
+.busc input, .ing input, .mod input, #registrobanda input[type="submit"]{
   background-color: transparent;
   color: #804200;
   border: 0;
@@ -774,7 +774,7 @@ background: rgba(76,76,76,0);
   transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
-.submit-input:hover{
+.submit-input:hover, #registrobanda input[type="submit"]:hover{
   background-color: #FFA500;
   color: #000000 !important;
   text-decoration: none;
@@ -978,7 +978,7 @@ input.radiomedia{
 }
 
 .media .inputs label{
-  margin: 0 1em;
+  margin: 0 1em !important;
 }
 
 .media div{
@@ -1425,14 +1425,14 @@ tspan {
   text-align: center;
   line-height: 30px;
   -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-     -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-       -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-          transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 
-   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
 .addbanda:hover{
@@ -1601,11 +1601,11 @@ input#userfile{
 
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
-.contenedor{
-
+#calendario{
+  margin-top: 50px;
 }
 
-.dashboard{
+.dashboard, #registrobanda{
   margin: 80px 0;
 }
 
@@ -1658,7 +1658,6 @@ input#userfile{
 
 .panelfooter{
   text-align: left;
-  /* background-color: #FFFFFF; */
   padding: 10px;
   border-top: 1px solid #C80000;
 }
