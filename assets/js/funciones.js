@@ -225,28 +225,32 @@ $(document).ready(function() {
 
 	}
 
-	// Menu activo
+	// Reproductor
 
-	if ($(".agenda").length > 0 ||$(".menulogin").length > 0)
-	{
-	   $("nav ul li:nth-child(1)").addClass("active");
-	}
-	else if ($("#nosotros").length > 0 || $("#ingresar-fecha").length > 0)
-	{
-	   $("nav ul li:nth-child(2)").addClass("active");
-	}
-	else if ($("#calendario").length > 0 || $("#ingresar-fecha").length > 0 || $("#ingresar-banda").length > 0)
-	{
-	   $("nav ul li:nth-child(3)").addClass("active");
-	}
-	else if ($("#ingresar-lugar").length > 0)
-	{
-	   $("nav ul li:nth-child(4)").addClass("active");
-	}
-	else if ($("#ingresar-genero").length > 0)
-	{
-	   $("nav ul li:nth-child(5)").addClass("active");
-	}
+		var playlist = Array();
+			playlist.push("http://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3");
+			playlist.push("http://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3");
+			playlist.push("http://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+
+		function getSong() {
+		   return playlist[Math.floor(Math.random() * playlist.length)];
+		}
+
+		var estado = false;
+		var audio = document.createElement("audio");
+    	audio.src = getSong();
+
+		$(".mediaplayer").click(function(){
+
+			if (estado == false){
+		    	audio.play(); 
+		    	estado = true;
+		    }else{
+		    	audio.pause();
+		    	estado = false;
+		    }
+		});
+	
 
 
 	// General de las bandas mas significativas, fade in y out de la info de las bandas
@@ -260,7 +264,7 @@ $(document).ready(function() {
         $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeIn(); 
     }
 
-    if (y > 500 && y < 1000) {
+    if (y > 500 && y < 1100) {
         $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeIn(); 
     } else {
         $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeOut(); 
@@ -875,7 +879,6 @@ $(document).ready(function() {
 
 
 
-
 	// Filtro de Calendario de fechas
 
 	$(".calendario_criterio").click(function(e){
@@ -897,7 +900,7 @@ $(document).ready(function() {
 
 						//rutaimgs = "http://www.ranasrojas.com.ar"; //Esto va en PRD
 
-						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia + " - " + value.hora + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
+						$(".fechascal").append("<div class='itemcal'><div class='imgitem'><img src='" + rutaimgs + "/assets/img/calimgs/" + value.imagen + "'></div><div class='infoitem'><h2 class='fecbandas'>" + value.nombre + "</h2><p class='fecitem'>" + value.dia.substr(8,2) + "-" + value.dia.substr(5,2) + "-" + value.dia.substr(0,4) + " - " + value.hora.substr(0,5) + " hs" + "</p><p class='feclugar'>" + value.lugar + "</p></div></div>");
 					});
 				}
 				else{
@@ -908,6 +911,7 @@ $(document).ready(function() {
 
 		return false;
 	});
+
 
 
 
@@ -1333,9 +1337,11 @@ $(document).ready(function() {
 	$.datepicker.setDefaults($.datepicker.regional['es']);
 	
 	$(function(){
+
     	$("#ingresar-fecha-fecha").datepicker({
     		dateFormat: "dd-mm-yy"
     	});
+
   	});
 
 	// Animsition

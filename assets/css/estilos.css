@@ -69,6 +69,19 @@ table{
 }
 
 
+/*TITULOS*/
+
+.titulosDestacados{
+  font-size: 4em;
+  font-family: "Dimitri";
+  letter-spacing: 1.5px;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+}
+
+
 /* CENTRADO DEL SLIDER EN MITAD DE PANTALLA */
 
   .contenedorCell{
@@ -99,6 +112,7 @@ nav{
   min-height: initial !important;
   margin: 0 !important;
   height: auto !important;
+  height: 15px;
 }
 
 .navbar-nav {
@@ -165,7 +179,7 @@ nav a:hover{
 
 nav ul{
   margin: 0;
-  
+  width: 100%;
 }
 
 nav ul li{
@@ -174,7 +188,24 @@ nav ul li{
 }
 
 .navbar-toggle{
-  background-color: #DDD;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #FF0000;
+  float: none;
+  margin: 15px;
+  padding: 0;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 19px;
+  margin: 0 auto;
+  height: 2px;
+  border-radius: 1px;
+  border-color: red;
+  color: red;
+  border: solid 1px;
 }
 
 #navbarCollapse{
@@ -182,6 +213,7 @@ nav ul li{
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.95);
 }
+
 
 .fechainfoslider{
   width: 100vw;
@@ -191,7 +223,11 @@ nav ul li{
   /*left: 10%;*/
 }
 
-.fechainfoslider h2, .fechainfoslider p{
+.fechainfoslider{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fechainfoslider p,.fechainfoslider h2{
   text-align: center;
   /*padding-left: 15%;*/
   /*background-color: #FFFFFF;*/
@@ -200,13 +236,22 @@ nav ul li{
   /*border-bottom-color: #201D19;
   /*order-top: 0;*/
   /*border-left-color: #CFA029;*/
-  background-color: rgba(0, 0, 0, 0.8);
+ 
   text-transform: uppercase;
 }
 
 .fechainfoslider{
   font-family: "Dimitri";
 }
+
+/*.fechainfoslider h2{
+  color: #FEC100;
+  margin: 0;
+  font-size: 5em;
+  padding-top: 10px;
+  letter-spacing: 2px;
+}
+*/
 
 .fechainfoslider h2{
   color: #FEC100;
@@ -215,6 +260,7 @@ nav ul li{
   /* height: 90px; */
   padding-top: 10px;
   letter-spacing: 2px;
+  
 }
 
 .fechainfoslider p{
@@ -238,6 +284,8 @@ nav ul li{
 
 .flexslider img{
   box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 746px;
 
 }
 
@@ -289,11 +337,15 @@ nav ul li{
 }
 
 .agendaTitulo{
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
 .agendaTitulo h2{
   margin: 0;
+}
+
+#da-thumbs{
+  margin: 0 1em;
 }
 
 /* INFO AGENDA */
@@ -317,7 +369,8 @@ nav ul li{
 }
 
 .da-thumbs .dtli a div {
-  background-image: url("../img/pattern1.png");
+  background-color: rgba(15, 15, 15, 0.97);
+  /*background-image: url("../img/pattern2.png");*/
   background-attachment: fixed;
   position: absolute;
 
@@ -331,7 +384,7 @@ nav ul li{
 }
 
 .da-thumbs .dtli .fecha-agenda{
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #EAEAEA;
 }
 
@@ -368,44 +421,102 @@ nav ul li{
   height: 100vh;
   text-align: left;
   position: relative;
-  overflow: visible;
-  background-image: url("../img/navbg.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #nosotros p{
   color: #F9BC20;
 }
 
+.nosotrosContent{
+  height: 100%;
+  /* display: table; */
+  text-align: center;
+  width: 100%;
+  background-image: url("../img/navbg.gif");
+  background-size: cover;
+}
+
 .infonos{
-  height: 70%;
-  width: 75%;
-  position: absolute;
+  width: 100%;
   margin: 0 auto;
-  padding: 2em 25%;
-  top: 35%;
-  background-color: rgba(0, 0, 0, 0.9);
+  /* padding: 2em 25%; */
+  /* background-color: rgba(0, 0, 0, 0.9); */
   font-size: 1.15em;
   line-height: 1.45em;
-  text-align: left;
-  border-radius: 50%;
+  text-align: center;
+}
+
+.row1{
+  border-top: 100vh solid rgba(0, 0, 0, 0.9);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+  /* background-image: url("../img/navbg.gif"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
+.row2{
+  margin: 0 auto;
+  width: 30%;
+  font-size: 1.25em;
+  /* padding: 2em; */
+  position: absolute;
+  /* display: inline-block; */
+  /* right: 50%; */
+  left: 35%;
 }
 
 .nosotrosRanaroja{
   width: 100%;
-  height: 470px;
-  top:0;
+  height: 100%;
+  bottom: 0;
   position:absolute;
-  background-image: url("../img/nosotros.png");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.pataizq{
+  width: 500px;
+  height: 100vh;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataizquierda.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: 100;
+}
+
+.selloRana{
+  background-image: url("../img/selloRana.png");
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.patader{
+  width: 400px;
+  height: 100vh;
+  right: 0; 
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataderecha.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
   z-index: 100;
 }
 
 /* CALENDARIO */
 
 #calendario{
+    overflow-y: scroll;
     background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.27) 59%, rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(59%,rgba(0,0,0,0.27)), color-stop(100%,rgba(0,0,0,0.62))), url("../img/pattern1.png") no-repeat !important;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.27) 59%,rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
@@ -419,10 +530,12 @@ nav ul li{
 
 .linkscalendario{
   margin: 0 auto;
+  height: 37px;
   width: 75%;
   display: inline-block;
   text-align: right;
-  padding: 1em 1em;
+  /* padding: 1em 1em; */
+  vertical-align: bottom;
 }
 
 .filtros{
@@ -430,24 +543,38 @@ nav ul li{
 }
 
 .fechas{
+  height: 80px;
   border-bottom: 1px solid #FF0000;
 }
 
-.fechas h2{
-  height: 83px;
+.fechas h2, #registrobanda h2{
+  height: 65px;
   display: inline-block;
   font-family: "Dimitri";
   color: #FEC100;
   font-size: 4em;
-  letter-spacing: 2px;  
-  margin:0;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .fechas a{
-
-  padding: 0.25em;
+  text-decoration: none;
+  padding: 26px 2em;
   font-size: 1.25em;
   color: #F90000;
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fechas a:hover{
+  background-color: #F90000;
+  color: #000000;
 }
 
 .itemcal{
@@ -533,7 +660,7 @@ input,textarea,select{
 /* BANDAS */
 
 #bandas .banda{
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     width: 100% !important;
     margin: 0;
@@ -570,7 +697,13 @@ input,textarea,select{
   font-family: "Dimitri";
   letter-spacing: 1.5px;
   margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 90px;
 }
+
+
 
 .banda .infototalbanda p{
   font-size: 0.75em;
@@ -601,8 +734,46 @@ input,textarea,select{
   /*float: left;*/
 }
 
+#banda1{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda2{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda3{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+}
+
 #bandas > div:nth-of-type(1) > div:nth-of-type(2) {
-    background: url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 90vh;
     position:absolute;
@@ -610,10 +781,12 @@ input,textarea,select{
     top:0px;
     width:100%;
     min-width: 960px;
+
 }
 
+
+
 #bandas > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
@@ -623,8 +796,8 @@ input,textarea,select{
     min-width: 960px;
 }
 
+
 #bandas > div:nth-of-type(3) > div:nth-of-type(2)  {
-    background: url("../img/bandas3.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
@@ -649,7 +822,7 @@ input,textarea,select{
   display: block;
 }
 
-.busc input, .ing input, .mod input{
+.busc input, .ing input, .mod input, #registrobanda input[type="submit"]{
   background-color: transparent;
   color: #804200;
   border: 0;
@@ -671,7 +844,7 @@ input,textarea,select{
   transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
-.submit-input:hover{
+.submit-input:hover, #registrobanda input[type="submit"]:hover{
   background-color: #FFA500;
   color: #000000 !important;
   text-decoration: none;
@@ -875,7 +1048,7 @@ input.radiomedia{
 }
 
 .media .inputs label{
-  margin: 0 1em;
+  margin: 0 1em !important;
 }
 
 .media div{
@@ -890,6 +1063,7 @@ footer{
   bottom: 0;
   /* margin-top: -115px !important; */
   padding-bottom: 55px;
+  z-index: 100;
 }
 
 .linksfooter{
@@ -916,7 +1090,7 @@ footer{
 }
 
 .linksfooter a:hover{
-  opacity: 0.25;
+  opacity: 0.55;
 }
 
 .mediaplayer {
@@ -1083,6 +1257,8 @@ div#grafico4 path {
 }
 
 
+
+
 svg {
   font-family: 'Montserrat Alternates', sans-serif !important;
 }
@@ -1150,7 +1326,7 @@ tspan {
 
 @media (max-width: 500px) {
   #navbarCollapse .navico {
-    background-size: contain;
+    background-size: 50%  ;
     background-repeat: no-repeat;
     background-position: center center;
     font-size: 0;
@@ -1319,14 +1495,14 @@ tspan {
   text-align: center;
   line-height: 30px;
   -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-     -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-       -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-          transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 
-   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
 .addbanda:hover{
@@ -1466,7 +1642,7 @@ input#userfile{
 .sliderop label{
   height: 100%;
   vertical-align: middle;
-  padding-top: 20px;
+  padding-top: 35px;
   padding-left: 2em;
 } 
 
@@ -1495,12 +1671,16 @@ input#userfile{
 
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
-.contenedor{
+#calendario{
+  /*margin-top: 50px;*/
+}
 
+#registrobanda{
+  margin: 30px 0 80px;
 }
 
 .dashboard{
-  margin: 80px 0;
+  margin: 50px 0;
 }
 
 .contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar, .repetir{
@@ -1526,6 +1706,18 @@ input#userfile{
   color: black;
   margin: 5vh 0;
   padding: 1em;
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+   -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+        transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+ -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.panel:hover{
+  background-color: rgba(255, 165, 0, 0.10);
 }
 
 .bloques{
@@ -1540,7 +1732,6 @@ input#userfile{
 
 .panelfooter{
   text-align: left;
-  /* background-color: #FFFFFF; */
   padding: 10px;
   border-top: 1px solid #C80000;
 }
@@ -1742,40 +1933,82 @@ input#userfile{
 
 
 
+@media (max-width: 767px) {
+    .fechainfoslider p {
+        margin: 0;
+        font-size: 1.5em;
+    }
 
-@media (max-width: 767px) {}
-@media (min-width: 768px) and (max-width: 991px) {}
+    .fechainfoslider h2 {
+        font-size: 4em;
+    }
+
+    .linkscalendario {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .banda .infototalbanda h2{
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    .banda .infototalbanda p{
+      font-size: 0.65em;
+    }
+
+    .banda .infobanda{
+      width: 100%;
+      padding: 2em 1em;
+    }
+
+    .banda iframe{
+      float: none;
+      display: block;
+      width: 100%;
+      padding: 0 1em;
+    }
+
+    .agendaTitulo h2{
+      font-size: 4em;
+    }
+
+    #registrobanda h2{
+      font-size: 3em;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .fechas a{
+    padding: 26px 1em;
+    font-size: 1.10em;
+  }
+
+  .fechas h2{
+    font-size: 3.1em;
+  }
+
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  nav{
-    height: 15px;
+
+
+  .fechas a{
+    padding: 26px 1em;
   }
 
-  nav ul{
-    
-    width: 100%;
-  }
-
-  nav ul li{
-
+  .fechas h2{
+    font-size: 3.5em;
   }
 
 }
 
 @media (min-width: 1200px){
 
-  nav{
-    height: 15px;
-  }
-
-  nav ul{
-    
-    width: 100%;
-  }
-
-  nav ul li{
-
-    
-  }
 
 }

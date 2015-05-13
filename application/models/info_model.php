@@ -69,6 +69,7 @@ class info_model extends CI_Model{
     	return $this->db->count_all_results();
 	}
 
+
 	function fecha($criterio){
 		$this->db->select('fecha.id AS `fid`,fecha.nombre,fecha.imagen,fecha.dia,fecha.hora,lugar.id,lugar.nombre AS `lugar`');
 		$this->db->from('fecha');
@@ -83,9 +84,9 @@ class info_model extends CI_Model{
 				$this->db->where('dia',date('Y-m-d', strtotime('+1 day')));
 			break;
 
-			/*case 'semana':
-				
-			break;*/
+			case 'semana':
+				$this->db->where("YEARWEEK(dia,1) = YEARWEEK(NOW(),1)");
+			break;
 
 			case 'mes':
 				$mesactual = date('m');
@@ -93,11 +94,16 @@ class info_model extends CI_Model{
 				$inicio = $anioactual."/".$mesactual."/01";
 				$cantdias = cal_days_in_month(CAL_GREGORIAN, $mesactual, $anioactual);
 				$fin = $anioactual."/".$mesactual."/".$cantdias;
-				$this->db->where('dia >=',$inicio);
+				//$this->db->where('dia >=',$inicio);
 				$this->db->where('dia <=',$fin);
+				$this->db->where('dia >=',date("Y-m-d"));
 			break;
 
 			case 'todas':
+				$this->db->where('dia >=',date("Y-m-d"));
+			break;
+
+			case 'todos':
 				$this->db->where('dia >=',date("Y-m-d"));
 			break;
 			

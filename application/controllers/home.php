@@ -542,7 +542,7 @@ class Home extends CI_Controller {
 
 	function validar_ingresar_banda()
 	{
-		if($this->session->userdata('logueado')){
+		//if($this->session->userdata('logueado')){
 			$this->form_validation->set_error_delimiters('<div class="error"><p>','</p></div>');
 			$this->form_validation->set_rules('nombre','Nombre','required|xss_clean|max_length[80]');
 			$this->form_validation->set_rules('genero','Genero','required|xss_clean|max_length[80]');
@@ -664,10 +664,10 @@ class Home extends CI_Controller {
 			echo json_encode($response);
 			exit();
 
-		}
+		/*}
 		else{
 			redirect('ingresar', 'refresh');
-		}	
+		}*/	
 	}
 
 
