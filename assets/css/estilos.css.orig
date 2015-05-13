@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿  /* GENERAL Probando GIT 123 456888*/ 
-=======
-﻿  /* GENERAL */
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+  /* GENERAL */
 
 @font-face {
   font-family: 'Dimitri';
@@ -11,9 +7,20 @@
   font-style: normal;
 }
 
+html{
+  height: 100%;
+}
 
 body{
-	background-color: #000000 !important;
+	background: rgb(25,25,25); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%, rgba(22,22,22,1) 51%, rgba(0,0,0,1) 97%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(25,25,25,1)), color-stop(51%,rgba(22,22,22,1)), color-stop(97%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(25,25,25,1) 0%,rgba(22,22,22,1) 51%,rgba(0,0,0,1) 97%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191919', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
   color: #FFFFFF;
 	font-family: 'Montserrat Alternates', sans-serif;
   height:100%;
@@ -29,7 +36,7 @@ a{
 }
 
 input{
-	outline: 0;
+	outline: 0 !important;
 }
 
 p{
@@ -37,9 +44,14 @@ p{
 	font-size: 0.8em;
 }
 
+input[type=radio]{
+  opacity: 0.6;
+}
+
 ul{
 	list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 table{
@@ -56,10 +68,20 @@ table{
   width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+/*TITULOS*/
+
+.titulosDestacados{
+  font-size: 4em;
+  font-family: "Dimitri";
+  letter-spacing: 1.5px;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   
+}
+
+
 /* CENTRADO DEL SLIDER EN MITAD DE PANTALLA */
 
   .contenedorCell{
@@ -90,19 +112,25 @@ nav{
   min-height: initial !important;
   margin: 0 !important;
   height: auto !important;
+  height: 15px;
 }
 
 .navbar-nav {
-    display: table;
-    table-layout: fixed;
+  display: table;
+  table-layout: fixed;
+  width: 75%;
+  margin: 0 auto;
+  float: none;
+
 }
 
 .nav>li>a {
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   background-color: transparent;
-  /*padding: 0.5em 0 1em 0;*/
-  font-size: 1em;
+
+   /*padding: 0.5em 0 1em 0;*/
+  font-size: 0.9em;
  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
    -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
      -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
@@ -115,14 +143,13 @@ nav{
 }
   
 .nav li a:hover {
-  height: 80px;
+  height: 65px;
   background-color: #F90000;
 }
 
 .nav li a{
   height: 50px;
-  border-top: 1px solid #F90000;
-  background-color: rgba(0, 0, 0, 0.9);
+  /*border-top: 1px solid #F90000;*/
 }
 
 .nav li{
@@ -132,9 +159,6 @@ nav{
   /*background-color: #171411; #9B0000*/
   margin: -3px;
 }
-
-
-
 
 .navbar-brand{
   width: 10%;
@@ -155,7 +179,7 @@ nav a:hover{
 
 nav ul{
   margin: 0;
-  
+  width: 100%;
 }
 
 nav ul li{
@@ -164,31 +188,55 @@ nav ul li{
 }
 
 .navbar-toggle{
-  background-color: #DDD;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #FF0000;
+  float: none;
+  margin: 15px;
+  padding: 0;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 19px;
+  margin: 0 auto;
+  height: 2px;
+  border-radius: 1px;
+  border-color: red;
+  color: red;
+  border: solid 1px;
 }
 
 #navbarCollapse{
+  border-top: 1px solid #FF0000;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
+
 .fechainfoslider{
-  width: 100%;
+  width: 100vw;
   text-align: left;
   position: absolute;
   /*bottom: 0;*/
   /*left: 10%;*/
 }
 
-.fechainfoslider h2, .fechainfoslider p{
-  text-align: left;
-  padding-left: 15%;
+.fechainfoslider{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fechainfoslider p,.fechainfoslider h2{
+  text-align: center;
+  /*padding-left: 15%;*/
   /*background-color: #FFFFFF;*/
   color: #EF0000;
   /*border-bottom: 1px solid #FF0000;
   /*border-bottom-color: #201D19;
   /*order-top: 0;*/
   /*border-left-color: #CFA029;*/
-  background-color: rgba(0, 0, 0, 0.8);
+ 
   text-transform: uppercase;
 }
 
@@ -196,45 +244,60 @@ nav ul li{
   font-family: "Dimitri";
 }
 
-.fechainfoslider h2{
-  color: #FEC100  ;
+/*.fechainfoslider h2{
+  color: #FEC100;
   margin: 0;
   font-size: 5em;
-  height: 90px;
+  padding-top: 10px;
   letter-spacing: 2px;
+}
+*/
+
+.fechainfoslider h2{
+  color: #FEC100;
+  margin: 0;
+  font-size: 5em;
+  /* height: 90px; */
+  padding-top: 10px;
+  letter-spacing: 2px;
+  
 }
 
 .fechainfoslider p{
+  margin: 0;
   font-size: 2em;
-  height: 44px;
 }
-
-
 
 /* INICIO */
 
 .flexslider{
   width: 100%;
   overflow: hidden;
+  height: 100% !important;
+  z-index: 1;
 }
 
 .flexslider ul{
   padding: 0;
+  
 }
 
 .flexslider img{
   box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
-  /*width: 100%;
-  height: 100%;*/
+  width: 100%;
+  max-width: 746px;
+
 }
 
 .agenda{
-  background-image: url("../img/pattern2.png");
+   background-color: rgba(0, 0, 0, 0.95);
+  /*background-image: url("../img/pattern2.png");
   background-attachment: fixed;
   /*background-color: #FEF603;*/
-  padding: 2em 15px;
+  padding: 0em 0 70px 0;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 
 .agenda .row{
@@ -274,11 +337,15 @@ nav ul li{
 }
 
 .agendaTitulo{
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
 .agendaTitulo h2{
   margin: 0;
+}
+
+#da-thumbs{
+  margin: 0 1em;
 }
 
 /* INFO AGENDA */
@@ -302,7 +369,8 @@ nav ul li{
 }
 
 .da-thumbs .dtli a div {
-  background-image: url("../img/pattern1.png");
+  background-color: rgba(15, 15, 15, 0.97);
+  /*background-image: url("../img/pattern2.png");*/
   background-attachment: fixed;
   position: absolute;
 
@@ -316,7 +384,7 @@ nav ul li{
 }
 
 .da-thumbs .dtli .fecha-agenda{
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #EAEAEA;
 }
 
@@ -353,42 +421,102 @@ nav ul li{
   height: 100vh;
   text-align: left;
   position: relative;
-  overflow: visible;
-  background-image: url("../img/navbg.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #nosotros p{
   color: #F9BC20;
 }
 
-.infonos{
-  height: 70%;
-  width: 100%;
-  position: absolute;
-  margin: 0 auto;
-  padding: 2em 25%;
-  top: 30%;
-  background-color: rgba(0, 0, 0, 0.9);
-  font-size: 2em;
+.nosotrosContent{
+  height: 100%;
+  /* display: table; */
   text-align: center;
+  width: 100%;
+  background-image: url("../img/navbg.gif");
+  background-size: cover;
+}
+
+.infonos{
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 2em 25%; */
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  font-size: 1.15em;
+  line-height: 1.45em;
+  text-align: center;
+}
+
+.row1{
+  border-top: 100vh solid rgba(0, 0, 0, 0.9);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+  /* background-image: url("../img/navbg.gif"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
+.row2{
+  margin: 0 auto;
+  width: 30%;
+  font-size: 1.25em;
+  /* padding: 2em; */
+  position: absolute;
+  /* display: inline-block; */
+  /* right: 50%; */
+  left: 35%;
 }
 
 .nosotrosRanaroja{
   width: 100%;
-  height: 470px;
-  top:0;
+  height: 100%;
+  bottom: 0;
   position:absolute;
-  background-image: url("../img/nosotros.png");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.pataizq{
+  width: 500px;
+  height: 100vh;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataizquierda.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  z-index: 100;
+}
+
+.selloRana{
+  background-image: url("../img/selloRana.png");
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+}
+
+.patader{
+  width: 400px;
+  height: 100vh;
+  right: 0; 
+  bottom: 0;
+  position: absolute;
+  background-image: url("../img/pataderecha.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
   z-index: 100;
 }
 
 /* CALENDARIO */
 
 #calendario{
+    overflow-y: scroll;
     background: -moz-linear-gradient(top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.27) 59%, rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.85)), color-stop(59%,rgba(0,0,0,0.27)), color-stop(100%,rgba(0,0,0,0.62))), url("../img/pattern1.png") no-repeat !important;
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.27) 59%,rgba(0,0,0,0.62) 100%), url("../img/pattern1.png") repeat !important;
@@ -397,13 +525,17 @@ nav ul li{
     /*IMPORTANTE !AJUSTAR LOS DEGRADE CUANDO ME DECIDA CUAL VA*/
     background: linear-gradient(to bottom, rgba(255, 0, 0, 0.07) 0%,rgba(0, 0, 0, 0.27) 59%,rgba(0, 0, 0, 0.69) 100%), url("../img/pattern1.png") repeat !important;
     background-attachment: fixed !important;
+    height: 100%;
 }
 
 .linkscalendario{
   margin: 0 auto;
+  height: 37px;
   width: 75%;
-  display: table;
-  table-layout: fixed;
+  display: inline-block;
+  text-align: right;
+  /* padding: 1em 1em; */
+  vertical-align: bottom;
 }
 
 .filtros{
@@ -411,23 +543,45 @@ nav ul li{
 }
 
 .fechas{
+  height: 80px;
   border-bottom: 1px solid #FF0000;
 }
 
-.fechas h2{
-  height: 95px;
+.fechas h2, #registrobanda h2{
+  height: 65px;
+  display: inline-block;
   font-family: "Dimitri";
   color: #FEC100;
-  font-size: 5em;
-  letter-spacing: 2px;  
-  margin:0;
+  font-size: 4em;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .fechas a{
-  display: table-cell;
-  padding: 0.25em;
+  text-decoration: none;
+  padding: 26px 2em;
   font-size: 1.25em;
   color: #F90000;
+<<<<<<< HEAD
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+=======
+  -webkit-transition: background-color 500ms, color 500ms, color 500ms; 
+     -moz-transition: background-color 500ms, color 500ms, color 500ms; 
+       -o-transition: background-color 500ms, color 500ms, color 500ms; 
+          transition: background-color 500ms, color 500ms, color 500ms; /* ease (default) */
+>>>>>>> bec6ce0467ab56bde7286277fe28835bb76b0d13
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.fechas a:hover{
+  background-color: #F90000;
+  color: #000000;
 }
 
 .itemcal{
@@ -437,11 +591,13 @@ nav ul li{
 }
 
 .imgitem img{
+  width: 202px;
+  height: 202px;
   border-radius: 7px;
 }
 
 .fechascal{
-  padding: 90px 0 0 0;
+  padding: 40px 0 0 0;
   width: 75%;
   margin: 4em auto;
 }
@@ -453,23 +609,24 @@ nav ul li{
 }
 
 .itemcal{
-  margin: 25px 20px;
-  width: 35%;
-  display: inline-block;  
+  vertical-align: top;
+  margin: 20px;
+  width: 202px;
+  display: inline-block;
 }
 
 .itemcal h2{
   color: #FEC100;
   margin: 0;
   text-align: left;
-  padding: 0 0 0 10px;
+  font-size: 1em;
+  padding: 7px 0 4px 0;
 }
 
 .itemcal p{
-  font-size: 1.25em;
+  font-size: 1em;
   color: #B8B8B8;
   text-align: left;
-  padding: 0 0 0 10px;
   margin: 0;
 }
 
@@ -480,6 +637,7 @@ nav ul li{
 
 .infoitem{
   display: inline-block;
+  padding: 0 7px;
 }
 
 /* BANDAS */
@@ -509,7 +667,7 @@ input,textarea,select{
 /* BANDAS */
 
 #bandas .banda{
-    min-height: 748px;
+    min-height: 100vh;
     position: relative;
     width: 100% !important;
     margin: 0;
@@ -521,43 +679,55 @@ input,textarea,select{
 .banda .infototalbanda {
     /*left: 40px;
     position: absolute;*/
-    bottom: 50px;
+    bottom: 0;
     width: 100%;
     z-index: 4;
-    background-color: rgba(0, 0, 0, 0.8);
+   /* background-color: rgba(0, 0, 0, 0.8);*/
     color: #FDC000;
     position: absolute;
     overflow: hidden;
-    text-align: right;
+    text-align: left;
     font-size: 1.5em;
+
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
 }
 
 .banda .infototalbanda h2{
-<<<<<<< HEAD
+  font-size: 4em;
   font-family: "Dimitri";
   letter-spacing: 1.5px;
-=======
-  font-size: 2em;
-  font-family: "Dimitri";
-  letter-spacing: 1.5px;
-  margin: 1em 0 0 0;
+  margin: 0 auto;
+  background: -webkit-linear-gradient(#FFCB00, #C04200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 90px;
 }
 
+
+
 .banda .infototalbanda p{
+  font-size: 0.75em;
   margin: 0;
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
 }
 
 .banda .content{
   width: 75%;
   z-index: 4;
+  padding-bottom: 4em;
   margin: 0 auto;
 }
 
 .banda .infobanda{
   width: 74%;
   display: inline-block;
-  padding: 0em 4em;
+  padding: 0em 2em;
   margin: 0 auto;
   vertical-align: top;
   /*float: left;*/
@@ -571,31 +741,74 @@ input,textarea,select{
   /*float: left;*/
 }
 
+#banda1{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda2{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
+}
+
+#banda3{
+  background-size: contain;
+  background-position: center;
+  background: rgba(76,76,76,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(76,76,76,0)), color-stop(1%, rgba(75,75,75,0)), color-stop(100%, rgba(19,19,19,1))), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -o-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: -ms-radial-gradient(center, ellipse cover, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  background: radial-gradient(ellipse at center, rgba(76,76,76,0) 0%, rgba(75,75,75,0) 1%, rgba(19,19,19,1) 100%), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 ), url("../img/bandas3.jpg") 100% 100% no-repeat fixed;
+}
+
 #bandas > div:nth-of-type(1) > div:nth-of-type(2) {
-    background: url("../img/bandas1.jpg") 50% 0 no-repeat fixed;
     margin: 0;
-    height: 748px;
+    height: 90vh;
     position:absolute;
+    background-size: cover;
     top:0px;
     width:100%;
     min-width: 960px;
+
 }
 
+
+
 #bandas > div:nth-of-type(2) > div:nth-of-type(2) {
-    background: url("../img/bandas2.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
+    background-size: cover;
     top:0;
     width:100%;   
     min-width: 960px;
 }
 
+
 #bandas > div:nth-of-type(3) > div:nth-of-type(2)  {
-    background: url("../img/bandas3.jpg") 50% 0 no-repeat fixed;
     margin: 0;
     height: 100%;
     position:absolute;
+    background-size: cover;
     top:0;
     width:100%;
     min-width: 960px;   
@@ -612,8 +825,65 @@ input,textarea,select{
   display: none;
 }
 
+.convocatoria div{
+  display: block;
+}
+
+.busc input, .ing input, .mod input, #registrobanda input[type="submit"]{
+  background-color: transparent;
+  color: #804200;
+  border: 0;
+  /*text-transform: uppercase;
+  /* border-top: 1px solid; */
+  border-bottom: 1px solid;
+  /* border: 0; */
+  padding: 0.5em 2.5em;
+  margin: 1em 0;
+  /* border-radius: 7px; */
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.submit-input:hover, #registrobanda input[type="submit"]:hover{
+  background-color: #FFA500;
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.form-horizontal .form-group{
+  display: inline-block;
+  vertical-align: top;
+  margin:0 0.5em;
+}
+
+.tieneslider{
+  width: auto !important;
+  float: left;
+}
+
+.imgslider-input{
+  clear: both;
+}
+
+.imgslider-input{
+  overflow: hidden;
+}
+
+input[name="imgslider"]{
+  display: none;
+}
+
 .listabandas{
-  margin: 30px 0 20px;
+  margin: 1em auto;
+  width: 100%;
+  text-align: center;
 }
 
 .mod .posicion-slide-input{
@@ -627,18 +897,17 @@ input,textarea,select{
 .resul th, .tablabandas th, .listgeneros th{
   display: table-cell;
   font-style: bold;
-  color: #ffffff;
+  color: rgba(255, 0, 0, 0.47);
 } 
 
 .resul th, .listgeneros th{
-  background-color: #AB1E22;
+  background: rgba(246, 246, 246, 0.03);
   padding: 10px;
 }
 
-
 .tablabandas th{
-  background-color: #337ab7;
   padding: 5px;
+  color: rgba(255, 0, 0, 0.47);
 }
 
 .resul td, .tablabandas td, .listgeneros td{
@@ -647,15 +916,17 @@ input,textarea,select{
 }
 
 .resul a, .resul tbody, .tablabandas a, .tablabandas tbody, .listgeneros a, .listgeneros tbody{
-  color: #000000;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .resul tr, .tablabandas tr, .listgeneros tr{
-  background: #f6f6f6;
+  background: rgba(246, 246, 246, 0.03);
+  border-top: 1px solid rgba(255, 0, 0, 0.25);
 }
 
 .resul tr:nth-of-type(odd), .tablabandas tr:nth-of-type(odd), .listgeneros tr:nth-of-type(odd){
-  background: #e9e9e9;
+  border-top: 1px solid rgba(255, 0, 0, 0.25);
+  background: none;
 }
 
 
@@ -671,7 +942,7 @@ form label{
 }
 
 form .inputs{
-  text-align: left;
+  text-align: right;
 }
 
 
@@ -693,7 +964,7 @@ form .inputs{
 }
 
 .error p{
-  color: #FFFFFF;
+  color: #D70000;
 }
   
 #dialog ul{
@@ -701,17 +972,105 @@ form .inputs{
   text-align: center;
 }
 
+.divBlockbandas{
+  display: block;
+  margin: 1.5em 0;
+}
+
+.provincia-input, .pais-input, .localidad-input{
+  max-width: 215px;
+}
+
+.form-control{
+  width: 100%;
+  max-width: 300px;
+  min-height: 45px;
+  display: block;
+  float: none;
+  padding: 0.5em 1em;
+  margin: 0.5em auto;
+  /* text-align: center; */
+  color: #5A5A5A;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.RadioDivIngBand{
+  margin: 1em 0 3em 0;
+}
+
+.RadioDivIngBand div label, .RadioDivIngBand div, .RadioDivIngBand label{
+  display: inline-block !important;
+}
+
+.labeltitle{
+  min-width: 350px;
+}
+
+.otrocontacto{
+  width: 22px;
+  height: 22px;
+  vertical-align: top;
+  margin: 0 5px 0 5px !important;
+}
+
+.media{
+  margin: 0 1.5em;
+  display: inline-block;
+}
+
+.media input, .media label{
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.media input{
+  width: auto !important;
+}
+
+input.radiomedia{
+  min-width: 22px !important;
+  min-height: 22px !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  vertical-align: middle;
+}
+
+.media .inputs, .media label{
+  max-width: 360px !important;
+}
+
+.media .inputs label{
+  margin: 0 1em !important;
+}
+
+.media div{
+  text-align: left;
+}
 
 /* FOOTER */
 
 footer{
   position: fixed !important;
-  /*bottom: 0 !important;*/
-  width:80px;
-  top: 50% !important;
-  margin-top: -115px !important;
- /* height:82px;
-  clear: both;*/
+  /* bottom: 0 !important; */
+  bottom: 0;
+  /* margin-top: -115px !important; */
+  padding-bottom: 55px;
+  z-index: 100;
 }
 
 .linksfooter{
@@ -722,7 +1081,7 @@ footer{
 
 .linksfooter img{
   float: left;
-  margin: 1em 20px;
+  margin: 1em 15px;
 }
 
 .linksfooter a{
@@ -738,16 +1097,16 @@ footer{
 }
 
 .linksfooter a:hover{
-  opacity: 0.25;
+  opacity: 0.55;
 }
 
 .mediaplayer {
   cursor: pointer;
   margin-right:2em;
-  top: 50%;
+  bottom: 75px;
   margin-top: -50px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   position: fixed;
   right: 0;
   border-radius: 50%;
@@ -772,28 +1131,10 @@ footer{
 }
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-/* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
-
-.contenedor{
-  margin-bottom: 50px;
-}
-
-
-.contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar, .repetir{
-=======
 /* LOGIN */
 
 
-.users{
+.logn{
   height: 100vh !important;
   display: table;
 }
@@ -882,19 +1223,478 @@ footer{
   background-color: green !important; 
 }
 
+.navuser p{
+  color: #FF0000;
+} 
+  
+.highcharts-background{
+  fill: transparent;
+ }
+
+.highcharts-axis{
+  display: none;
+}
+
+.highcharts-xaxis-labels{
+  display: none;
+}
+
+.highcharts-legend-item{
+  display: none;
+}
+
+/*------------- DASHBOARD ---------------*/
+
+div#grafico1 path {
+  stroke: transparent;
+}
+
+div#grafico2 path {
+  stroke: #454545;
+  stroke-width: 1px;
+}
+
+div#grafico3 path {
+  stroke: #454545;
+  stroke-width: 1px;
+}
+
+div#grafico4 path {
+  stroke: transparent;
+}
+
+
+
+
+svg {
+  font-family: 'Montserrat Alternates', sans-serif !important;
+}
+
+.highcharts-markers path {
+  fill: #F90000 !important;
+}
+
+tspan {
+  fill: #939393;
+}
+
+/*------------- DASHBOARD ---------------*/
+/*-------------    FIN    ---------------*/
+
+
+
+
+
+
+/*------------- NAV USERS ---------------*/
+
+.navuser{
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  border-bottom: 1px solid #FFA500;
+  border-top: none;
+}
+
+.navuser a{
+  text-align: center;
+   vertical-align: text-bottom;
+  color: #FFA500;
+  height: 50px;
+  border-top: none !important;
+  background-color: rgba(0, 0, 0, 0.9);
+  line-height: 15px;
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+} 
+
+.navbar-collapse{
+  padding: 0;
+}
+
+.navuser li{
+  vertical-align: top !important;
+}
+
+.navuser a:hover{
+    line-height: 50px;
+    background: #FFA500 !important;
+    color: #000000;
+
+}
+
+
+@media (max-width: 500px) {
+  #navbarCollapse .navico {
+    background-size: 50%  ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .dashIco{
+    background: url("../img/ui_dash.png"), transparent;    
+  }
+
+  .ingfechaIco{
+    background: url("../img/ui_ingfecha.png"), transparent;    
+  }
+
+  .ingbandaIco{
+    background: url("../img/ui_ingband.png"), transparent;    
+  }
+
+  .inglugarIco{
+    background: url("../img/ui_inglugar.png"), transparent;    
+  }
+
+  .inggeneroIco{
+    background: url("../img/ui_dash.png"), transparent;    
+  }  
+
+  .logoutIco{
+    background: url("../img/ui_logout.png"), transparent;    
+  }  
+
+}
+
+.navuser #navbarCollapse {
+  border-top: none;
+}
+
+
+
+/*------------- NAV USERS ---------------*/
+/*-------------    FIN    ---------------*/
+
+/*----------- INGRESAR FECHA ------------*/
+
+/*.fechasbg{
+  background-image: url("../img/fechasbg2.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}*/
+
+.userSubmenu{
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.userSubmenu a{
+  width: 40%;
+  
+  max-width: 250px;
+  display: inline-block;
+  font-size: 1em;
+  color: #FFA500;
+  text-transform: uppercase;
+  line-height: 35px;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+/*.showbusc{
+  border-top-right-radius: 10px;
+}
+
+.showing{
+  border-top-left-radius: 10px;
+}*/
+
+.userSubmenu a:hover{
+  background-color: #FFA500;
+  color: #000000;
+}
+
+.ing label, .busc label, .mod label, #registrobanda label{
+  display: block;
+  float: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: left;
+  color: rgba(234, 234, 234, 0.61);
+  font-weight: normal;
+}
+
+.inputs{
+  float: none;
+  display: block;
+  margin: 0 auto !important;
+  /* width: 15%; */
+  padding: 0;
+  max-width: 300px;
+}
+
+.inputs input{
+  margin: 0.5em 0;
+  width: 100%;
+  min-height: 45px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid #5A5A5A;
+  padding: 0.75em 1.25em;
+  border-radius: 4px;
+  -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.inputs input:valid{
+  color: #FFA500;
+}
+
+.inputs input:invalid{
+    color: #5A5A5A;
+}
+
+.inputs input:focus{
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+.inputs select:focus{
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+.tablefecha{
+  margin: 3em 0 0 0;
+}
+
+.addbanda{
+  width: 100%;
+  height: 30px;
+  max-width: 150px;
+  font-size: 0.75em;
+  color: #FFA500;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  -webkit-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition: all 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+
+  -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+  transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.addbanda:hover{
+  background-color: #FFA500;
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.addbanda:link{
+  margin: 0.25em 0;
+  text-decoration: none;
+  color: #5A5A5A;
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+.tablabandas{
+  margin: 2em 0;
+}
+
+select{
+  width: 100%;
+  max-width: 300px;
+  min-height: 45px;
+  display: block;
+  float: none;
+  padding: 0.5em 1em;
+  margin: 0.5em auto;
+  /* text-align: center; */
+  color: #5A5A5A;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.33);
+  border-radius: 4px;
+  outline: 0;
+  -webkit-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: border 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition: color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+         -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+            transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+option{
+  background-color: #111111 ;
+  padding:0.25em;
+  border:none;
+}
+
+select[name="posicion"]{
+  display: none;
+}
+
+.lugar-input select:focus{
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+.tablabandastitulo{
+  background-color: rgba(246, 246, 246, 0.03) !important;
+}
+
+.fecha-input, .hora-input{
+  width: 130px;
+  margin: 0em 0.5em 15px 0.5em !important;
+  display: inline-block;
+  }
+
+.fecha-input label, .fecha-input div{
+  width: 100% !important;
+}
+
+.hora-input label, .hora-input div{
+  width: 100% !important;
+}
+
+.fecha-input input, .hora-input input{
+  text-align: center;
+}
+
+.lugarfechahora{
+  margin: 1em 0;
+}
+
+.tieneslider{
+  height: 100% !important;
+  width: 20px !important;
+  margin: 0 1em !important; 
+}
+
+.posicion-slide-input div select{
+  max-width: 208px;
+  font-size: 0.9em;
+}
+
+
+.divimgslider{
+  display: block;
+  margin: 1.5em 0 1.5em 0;
+}
+
+.divimgslider div{
+  display: inline-block;
+}
+
+#imgslider{
+  font-size: 0.9em;
+  outline: none;
+}
+
+#userfile{
+  color: #5A5A5A !important;
+  font-size: 0.9em;
+  outline: none;
+}
+
+input#userfile{
+  outline: none;
+}
+
+.sliderop{
+  display: inline-block;
+  max-width: 160px;
+  height: 93.5px;
+  margin: 0 1em 0 1.5em !important;
+}
+
+.posicion-slide-input{
+  margin: 0 1em;
+}
+
+.sliderop label{
+  height: 100%;
+  vertical-align: middle;
+  padding-top: 35px;
+  padding-left: 2em;
+} 
+
+/*----------- INGRESAR FECHA ------------*/
+/*-------------    FIN    ---------------*/
+
+/*---------- INGRESAR LUGAR -------------*/
+
+
+.lugarbg{
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+
+#ingresar-lugar label{
+  width: 100%;
+}
+
+#ingresar-lugar .inputs{
+  width: 100%;
+}
+
+/*---------- INGRESAR LUGAR -------------*/
+/*-------------    FIN    ---------------*/
+
 /* FACU CSS AGREGAR DPS AL DE JULI | SACAR EL NAV QUE JODIA*/
 
-
-.row{
-  height: 100%;
+#calendario{
+  /*margin-top: 50px;*/
 }
 
-.contenedor{
-  height: 100%;
+#registrobanda{
+<<<<<<< HEAD
+  margin: 30px 0 80px;
+=======
+  margin: 30px 0;
+>>>>>>> bec6ce0467ab56bde7286277fe28835bb76b0d13
 }
 
-.contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar{
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
+.dashboard{
+  margin: 50px 0;
+}
+
+.contac2, #dialog-confirm2, .ing .localidad-input, #registrobanda .localidad-input, .ui-dialog-titlebar, .repetir{
   display: none;
 }
 
@@ -906,60 +1706,89 @@ footer{
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 .chart{  
   margin-top: 20px;
 }
-=======
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
 
 .panel {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    margin: 20px;
-    border-color: #337ab7;
-    color: black;
+  border-radius: 4px;
+  background-color: rgba(255, 165, 0, 0.05);
+  border-color: #337ab7;
+  color: black;
+  margin: 5vh 0;
+  padding: 1em;
+  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+   -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+        transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+ -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+     -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+       -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
+          transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+}
+
+.panel:hover{
+  background-color: rgba(255, 165, 0, 0.10);
+}
+
+.bloques{
+  overflow: hidden;
 }
 
 .text-right{
   text-align: right;
+  padding: 0 15px 15px;
+  color: #989898;
 }
 
 .panelfooter{
   text-align: left;
-  padding: 10px 0;
+  padding: 10px;
+  border-top: 1px solid #C80000;
 }
 
 .panelfooter a{
   text-decoration: none;
-  color: #000000;
+  color: #FFA500;
 }
 
 .panaelnoconfirmados{
-  background-color: #337ab7;
+  /*background-color: #337ab7;*/
   border-color: #337ab7;
 }
 
 .panelnoturno{
-  background-color: #5cb85c;
+  /*background-color: #5cb85c;*/
   border-color: #5cb85c;
 }
 
 .panelnoconvocatoria{
-  background-color: #f0ad4e;
+  /*background-color: #f0ad4e;*/
   border-color: #f0ad4e;
 }
 
 .panelheader{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    padding: 0 15px 15px;
+    /*padding: 0 15px 15px;*/
     color: #FFFFFF;
 }
 
+.panaelnoconfirmados .numeropanel{
+  color: #00A8FF;
+}
+
+.panelnoturno .numeropanel{
+  color: #2BFF00;
+}
+
+.panelnoconvocatoria .numeropanel{
+  color: #898FFF;
+}
+
+
 .numeropanel{
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .listgeneros{
@@ -967,7 +1796,7 @@ footer{
 }
 
 .form-control{
-  width: 40% !important;
+  width: 100% !important;
 }
 
 .menuprincipal{
@@ -987,15 +1816,11 @@ footer{
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-=======
-.dashboards{
-  height: 100%;
+
+.clockpicker-popover{
+  left: 50%;
+  margin-bottom: 50px;
 }
-
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6
-
-
 
 #dialog-overlay {
     width:100%; 
@@ -1119,47 +1944,105 @@ footer{
 
 
 
+@media (max-width: 767px) {
+    .fechainfoslider p {
+        margin: 0;
+        font-size: 1.5em;
+    }
+<<<<<<< HEAD
+
+    .fechainfoslider h2 {
+        font-size: 4em;
+    }
+=======
+
+    .fechainfoslider h2 {
+        font-size: 4em;
+    }
+
+    .linkscalendario {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .fechas a{
+      padding: 0.25em 2em;
+      font-size: 0.85em;
+    }
+}
 
 
-
-
-@media (max-width: 767px) {}
 @media (min-width: 768px) and (max-width: 991px) {}
 @media (min-width: 992px) and (max-width: 1199px) {
+>>>>>>> bec6ce0467ab56bde7286277fe28835bb76b0d13
 
-  nav{
-    height: 15px;
+    .linkscalendario {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .banda .infototalbanda h2{
+      font-size: 1.8em;
+      line-height: 50px;
+    }
+
+    .banda .infototalbanda p{
+      font-size: 0.65em;
+    }
+
+    .banda .infobanda{
+      width: 100%;
+      padding: 2em 1em;
+    }
+
+    .banda iframe{
+      float: none;
+      display: block;
+      width: 100%;
+      padding: 0 1em;
+    }
+
+    .agendaTitulo h2{
+      font-size: 4em;
+    }
+
+    #registrobanda h2{
+      font-size: 3em;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .fechas a{
+    padding: 26px 1em;
+    font-size: 1.10em;
   }
 
-  nav ul{
-    
-    width: 100%;
+  .fechas h2{
+    font-size: 3.1em;
   }
 
-  nav ul li{
+}
 
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+
+  .fechas a{
+    padding: 26px 1em;
+  }
+
+  .fechas h2{
+    font-size: 3.5em;
   }
 
 }
 
 @media (min-width: 1200px){
 
-  nav{
-    height: 15px;
-  }
 
-  nav ul{
-    
-    width: 100%;
-  }
-
-  nav ul li{
-
-    
-  }
-
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 81fb7ff57175d3dc629fb6540f0ae51eb0b4c9b6

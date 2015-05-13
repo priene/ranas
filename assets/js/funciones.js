@@ -256,25 +256,20 @@ $(document).ready(function() {
 	// General de las bandas mas significativas, fade in y out de la info de las bandas
 
 	$(document).scroll(function () {
-    var y = $(this).scrollTop();
 
-    if (y > 200) {
-        $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeOut(); 
-    } else {
-        $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeIn(); 
-    }
+	    var y = $(this).scrollTop();
 
-    if (y > 500 && y < 1100) {
-        $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeIn(); 
-    } else {
-        $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeOut(); 
-    }
+	    if (y < 200) {
+	        $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeIn(); 
+	    }
 
-    if (y > 1100) {
-        $('#bandas > div:nth-of-type(3) > div:nth-of-type(1)').fadeIn();
-    } else {
-        $('#bandas > div:nth-of-type(3) > div:nth-of-type(1)').fadeOut(); 
-    }
+	    if (y > 500 && y < 1100) {
+	        $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeIn(); 
+	    }
+
+	    if (y > 1100) {
+	        $('#bandas > div:nth-of-type(3) > div:nth-of-type(1)').fadeIn();
+	    }
 
 	});
 
@@ -1296,9 +1291,7 @@ $(document).ready(function() {
 			$(this).hoverdir();
 		});
 	});
-
-	// Bandas
-	$('.parallax').scrolly({bgParallax: true});
+	
 
 	// ----------- Ingresar fecha -----------
 
