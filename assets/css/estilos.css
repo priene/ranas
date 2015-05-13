@@ -1732,6 +1732,7 @@ input#userfile{
 
 .panelfooter{
   text-align: left;
+  /* background-color: #FFFFFF; */
   padding: 10px;
   border-top: 1px solid #C80000;
 }
@@ -1938,6 +1939,23 @@ input#userfile{
         margin: 0;
         font-size: 1.5em;
     }
+
+    .fechainfoslider h2 {
+        font-size: 4em;
+    }
+
+    .linkscalendario {
+        width: 100%;
+        text-align: center;
+        padding: 1em 1em;
+    }
+
+    .fechas a{
+      padding: 0.25em 2em;
+      font-size: 0.85em;
+    }
+}
+
 
     .fechainfoslider h2 {
         font-size: 4em;
