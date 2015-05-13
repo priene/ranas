@@ -559,10 +559,10 @@ nav ul li{
   padding: 26px 2em;
   font-size: 1.25em;
   color: #F90000;
-  -webkit-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-     -moz-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-       -o-transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); 
-          transition: background-color 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
+  -webkit-transition: background-color 500ms, color 500ms, color 500ms; 
+     -moz-transition: background-color 500ms, color 500ms, color 500ms; 
+       -o-transition: background-color 500ms, color 500ms, color 500ms; 
+          transition: background-color 500ms, color 500ms, color 500ms; /* ease (default) */
   -webkit-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
      -moz-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
        -o-transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); 
