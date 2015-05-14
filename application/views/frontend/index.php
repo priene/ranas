@@ -42,7 +42,7 @@
 		
 		<!-- Fijarse que para el ultimo div en sm es hidden-sm  -->
 
-		<div class="col-md-3 col-sm-4 col-xs-6">
+		<div class="col-md-3 col-sm-4 col-xs-12">
 
 			<?php
 
