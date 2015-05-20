@@ -21,7 +21,7 @@
 	        <div class="email-input form-group">
 	        <?php
 	        echo form_error('check_database');
-	        echo form_label('Correo electrónico', 'email', $attrlabel);
+	        echo form_label('Correo electr&oacute;nico', 'email', $attrlabel);
 	        echo "<div class='col-lg-6 col-md-6 col-sm-6 col-xs-12 inputs'>";
 			echo form_input($email);
 			echo "</div>";
@@ -40,9 +40,9 @@
 	 		</div>
 	 		<div class="ingresarBoton">
 	 		<?php
-			echo form_submit('ingresar', 'Inicar sesión','class="submit-input"');
+			echo form_submit('ingresar', 'Inicar sesion','class="submit-input"');
 			echo form_close();
-			echo anchor('/recuperar_password', '¿No puede acceder a su cuenta?', array('class' => 'recuperar-contrasena', 'title' => 'Recuperar contraseña'));
+			echo anchor('/recuperar_password', '&#191;No puede acceder a su cuenta?', array('class' => 'recuperar-contrasena', 'title' => 'Recuperar contraseña'));
 			?>
 			</div>
 	</section>
