@@ -6,7 +6,7 @@
 			<div class="linkscalendario">
 				<a class="calendario_criterio" href="home/calendario_criterio/todas">TODAS</a>
 				<a class="calendario_criterio" href="home/calendario_criterio/hoy">HOY</a>
-				<a class="calendario_criterio" href="home/calendario_criterio/maniana">MAÑANA</a>
+				<a class="calendario_criterio" href="home/calendario_criterio/maniana">MA&Ntilde;ANA</a>
 				<a class="calendario_criterio" href="home/calendario_criterio/semana">EN LA SEMANA</a>
 				<a class="calendario_criterio" href="home/calendario_criterio/mes">ESTE MES</a>
 			</div>
