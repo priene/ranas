@@ -32,7 +32,7 @@
 	
 <div class="agenda">
 	<div class="agendaTitulo">
-		<h2 class="wow fadeInLeftBig titulosDestacados">PRÓXIMAS</h2>
+		<h2 class="wow fadeInLeftBig titulosDestacados">PR&Oacute;XIMAS</h2>
 		<h2 class="wow fadeInRightBig titulosDestacados">FECHAS</h2>
 	</div>
 
