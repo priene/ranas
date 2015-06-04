@@ -6,7 +6,6 @@ $(document).ready(function() {
 
 	if($(".graficos").length > 0){
 
-
 		$.ajax({
 		url: "home/graficos",
 		type: "post",
@@ -134,94 +133,72 @@ $(document).ready(function() {
 	        });
 
 			$('#grafico4').highcharts({
-	        chart: {
-	            plotBackgroundColor: null,
-	            plotBorderWidth: 0,
-	            plotShadow: false
-	        },
-	        title: {
-	            text: 'Bandas en<br>la propuesta',
-	            align: 'center',
-	            verticalAlign: 'middle',
-	            y: 50
-	        },
-	        tooltip: {
-	            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-	        },
-	        plotOptions: {
-	            pie: {
-	                dataLabels: {
-	                    enabled: true,
-	                    distance: -50,
-	                    style: {
-	                        fontWeight: 'bold',
-	                        color: 'white',
-	                        textShadow: '0px 1px 2px black'
-	                    }
-	                },
-	                startAngle: -90,
-	                endAngle: 90,
-	                center: ['50%', '75%']
-	            }
-	        },
-	        series: [{
-	            type: 'pie',
-	            name: 'Porcentaje',
-	            innerSize: '50%',
-	            data: [
-	                [data.grafico4[0]["nombre"],parseInt(data.grafico4[0]["count(id_estado)"])],
-	                [data.grafico4[1]["nombre"],parseInt(data.grafico4[1]["count(id_estado)"])],
-	                [data.grafico4[2]["nombre"],parseInt(data.grafico4[2]["count(id_estado)"])]
-	            ]
-	        }]
-    });
-
-
-
-
-
-
-			
+		        chart: {
+		            plotBackgroundColor: null,
+		            plotBorderWidth: 0,
+		            plotShadow: false
+		        },
+		        title: {
+		            text: 'Bandas en<br>la propuesta',
+		            align: 'center',
+		            verticalAlign: 'middle',
+		            y: 50
+		        },
+		        tooltip: {
+		            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		        },
+		        plotOptions: {
+		            pie: {
+		                dataLabels: {
+		                    enabled: true,
+		                    distance: -50,
+		                    style: {
+		                        fontWeight: 'bold',
+		                        color: 'white',
+		                        textShadow: '0px 1px 2px black'
+		                    }
+		                },
+		                startAngle: -90,
+		                endAngle: 90,
+		                center: ['50%', '75%']
+		            }
+		        },
+		        series: [{
+		            type: 'pie',
+		            name: 'Porcentaje',
+		            innerSize: '50%',
+		            data: [
+		                [data.grafico4[0]["nombre"],parseInt(data.grafico4[0]["count(id_estado)"])],
+		                [data.grafico4[1]["nombre"],parseInt(data.grafico4[1]["count(id_estado)"])],
+		                [data.grafico4[2]["nombre"],parseInt(data.grafico4[2]["count(id_estado)"])]
+		            ]
+		        }]
+    		});
 		});
 
+		// Bloques del dashboard
 
-	var w = $(window).width();
-        if (w < 992) {
-        	console.log("a");
-            $('.bloques').after($('.graficos'));
-        }else if (w >= 992){
-        	console.log("b");
-        	$('.graficos').after($('.bloques'));
-        }
+		var w = $(window).width();
 
-
-	$(window).resize(function() {
-        var w = $(window).width();
-        if (w < 992) {
-        	console.log("a");
-            $('.bloques').after($('.graficos'));
-        }else if (w >= 992){
-        	console.log("b");
-        	$('.graficos').after($('.bloques'));
-        }
-    });
+	        if (w < 992) {
+	        	console.log("a");
+	            $('.bloques').after($('.graficos'));
+	        }else if (w >= 992){
+	        	console.log("b");
+	        	$('.graficos').after($('.bloques'));
+	        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		$(window).resize(function() {
+	        var w = $(window).width();
+	        if (w < 992) {
+	        	console.log("a");
+	            $('.bloques').after($('.graficos'));
+	        }else if (w >= 992){
+	        	console.log("b");
+	        	$('.graficos').after($('.bloques'));
+	        }
+	    });
 
 	}
 
@@ -238,15 +215,18 @@ $(document).ready(function() {
 
 		var estado = false;
 		var audio = document.createElement("audio");
-    	audio.src = getSong();
+    	
 
 		$(".mediaplayer").click(function(){
+			audio.src = "";
+			audio.src = getSong();
 
 			if (estado == false){
 		    	audio.play(); 
 		    	estado = true;
 		    }else{
 		    	audio.pause();
+		    	audio.currentTime = 0;
 		    	estado = false;
 		    }
 		});
@@ -255,24 +235,26 @@ $(document).ready(function() {
 
 	// General de las bandas mas significativas, fade in y out de la info de las bandas
 
-	$(document).scroll(function () {
+	if($("#bandas").length > 0){
 
-	    var y = $(this).scrollTop();
+		$(document).scroll(function () {
 
-	    if (y < 200) {
-	        $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeIn(); 
-	    }
+		    var y = $(this).scrollTop();
 
-	    if (y > 500 && y < 1100) {
-	        $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeIn(); 
-	    }
+		    if (y < 200) {
+		        $('#bandas > div:nth-of-type(1) > div:nth-of-type(1)').fadeIn(); 
+		    }
 
-	    if (y > 1100) {
-	        $('#bandas > div:nth-of-type(3) > div:nth-of-type(1)').fadeIn();
-	    }
+		    if (y > 500 && y < 1100) {
+		        $('#bandas > div:nth-of-type(2) > div:nth-of-type(1)').fadeIn(); 
+		    }
 
-	});
+		    if (y > 1100) {
+		        $('#bandas > div:nth-of-type(3) > div:nth-of-type(1)').fadeIn();
+		    }
 
+		});
+	}  
 
 	$(document).on("click","[name=banda]",function(e){
 		
@@ -454,11 +436,6 @@ $(document).ready(function() {
 					$(".mod .localidad-input").show();
 				});
 
-					
-        			
-    				
-				
-
 				$(".modificar-banda-convocatoria[value=" + data.banda[0].id_convocatoria + "]").prop('checked', true);
 				$(".modificar-banda-turno[value=" + data.banda[0].id_turno + "]").prop('checked', true);
 				$(".modificar-banda-estado[value=" + data.banda[0].id_estado + "]").prop('checked', true);
@@ -502,23 +479,16 @@ $(document).ready(function() {
 					$(".mod .imgslider-input").hide();
 					$(".mod .posicion-slide-input").hide();
 					$('.mod .tieneslider').prop('checked', false);
-
-
 				}
 
 				$("#modificar_fecha_lugar option[value=" + data.fech[0].id_lugar + "]").prop('selected', true);
-
 				$("#modificar_fecha_posicion option[value=" + data.fech[0].sid + "]").prop('selected', true);
-
 				$("#cargado").val(data.fech[0].fimagen);
-				
 			}
 			$(".busc").hide();
 			$(".mod").show();
 
-	}, 'json');
-
-		
+		}, 'json');
 
 	});	
 
@@ -867,13 +837,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
-
-
-
-
 	// Filtro de Calendario de fechas
 
 	$(".calendario_criterio").click(function(e){
@@ -908,9 +871,6 @@ $(document).ready(function() {
 	});
 
 
-
-
-
 	$(".radiomedia").change(function(){
 		if ($(this).val() == 'si') {
         	$(this).next().next().prop('disabled', false);
@@ -919,10 +879,6 @@ $(document).ready(function() {
          	$(this).next().next().next().next().prop('disabled', true); 
         }
 	});
-
-
-
-
 
 
 	// ----------- Bandas -----------
@@ -1256,13 +1212,6 @@ $(document).ready(function() {
             });         
         }
 	});
-
-
-
-
-
-
-
 
 
 

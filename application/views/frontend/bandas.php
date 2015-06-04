@@ -9,7 +9,7 @@
                 <iframe src="https://www.youtube.com/embed/84o8RGmIW88?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
+        
     </div>
     <div class="banda" id="banda2">
         <div class="infototalbanda">
@@ -21,7 +21,7 @@
             <iframe src="https://www.youtube.com/embed/84o8RGmIW88?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
+        
     </div>
     <div class="banda" id="banda3">
         <div class="infototalbanda">
@@ -33,7 +33,7 @@
             <iframe src="http://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
         </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
+        
     </div>
     <div class="banda" id="banda1">
         <div class="infototalbanda">
@@ -45,7 +45,7 @@
                 <iframe src="https://www.youtube.com/embed/84o8RGmIW88?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
+        
     </div>
     <div class="banda" id="banda2">
         <div class="infototalbanda">
@@ -57,7 +57,7 @@
             <iframe src="https://www.youtube.com/embed/84o8RGmIW88?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
+        
     </div>
     <div class="banda" id="banda3">
         <div class="infototalbanda">
@@ -69,6 +69,5 @@
             <iframe src="http://www.youtube.com/embed/XGSy3_Czz8k"></iframe>
         </div>
         </div>    
-        <div class="parallax" data-velocity="-.3"></div>
     </div>
 </div>

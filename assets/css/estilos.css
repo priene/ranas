@@ -822,7 +822,7 @@ input,textarea,select{
   display: block;
 }
 
-.busc input, .ing input, .mod input, #registrobanda input[type="submit"]{
+.busc input, .ing input, .mod input, #registrobanda input[type="submit"], .confirmarestadobanda{
   background-color: transparent;
   color: #804200;
   border: 0;
@@ -844,7 +844,7 @@ input,textarea,select{
   transition-timing-function: cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
 }
 
-.submit-input:hover, #registrobanda input[type="submit"]:hover{
+.submit-input:hover, #registrobanda input[type="submit"]:hover, .confirmarestadobanda:hover{
   background-color: #FFA500;
   color: #000000 !important;
   text-decoration: none;
@@ -887,13 +887,13 @@ input[name="imgslider"]{
   margin-top: 40px;
 }
 
-.resul th, .tablabandas th, .listgeneros th{
+.resul th, .tablabandas th, .listgeneros th, .tablaconfirmarbandas th, .tabladefinirturnos th, .tabladefinirconvocatorias th{
   display: table-cell;
   font-style: bold;
   color: rgba(255, 0, 0, 0.47);
 } 
 
-.resul th, .listgeneros th{
+.resul th, .listgeneros th, .tablaconfirmarbandas th, .tabladefinirturnos th, .tabladefinirconvocatorias th{
   background: rgba(246, 246, 246, 0.03);
   padding: 10px;
 }
@@ -903,26 +903,30 @@ input[name="imgslider"]{
   color: rgba(255, 0, 0, 0.47);
 }
 
-.resul td, .tablabandas td, .listgeneros td{
+.resul td, .tablabandas td, .listgeneros td, .tablaconfirmarbandas td, .tabladefinirturnos td, .tabladefinirconvocatorias td{
   padding: 6px 12px;
   display: table-cell;
 }
 
-.resul a, .resul tbody, .tablabandas a, .tablabandas tbody, .listgeneros a, .listgeneros tbody{
+.resul a, .resul tbody, .tablabandas a, .tablabandas tbody, .listgeneros a, .listgeneros tbody, .tablaconfirmarbandas a, .tablaconfirmarbandas tbody
+.tabladefinirturnos a, .tabladefinirturnos tbody, .tabladefinirconvocatorias a, .tabladefinirconvocatorias tbody{
   color: rgba(255, 255, 255, 0.3);
 }
 
-.resul tr, .tablabandas tr, .listgeneros tr{
+.resul tr, .tablabandas tr, .listgeneros tr, .tablaconfirmarbandas tr, .tabladefinirturnos tr, .tabladefinirconvocatorias tr{
   background: rgba(246, 246, 246, 0.03);
   border-top: 1px solid rgba(255, 0, 0, 0.25);
 }
 
-.resul tr:nth-of-type(odd), .tablabandas tr:nth-of-type(odd), .listgeneros tr:nth-of-type(odd){
+.resul tr:nth-of-type(odd), .tablabandas tr:nth-of-type(odd), .listgeneros tr:nth-of-type(odd),
+.tablaconfirmarbandas tr:nth-of-type(odd), .tabladefinirturnos tr:nth-of-type(odd), .tabladefinirconvocatorias tr:nth-of-type(odd){
   border-top: 1px solid rgba(255, 0, 0, 0.25);
   background: none;
 }
 
-
+.tablaconfirmarbandas, .tabladefinirturnos, .tabladefinirconvocatorias{
+  margin: 40px auto;
+}
 
 
 .criterio-input, .buscar-input{
