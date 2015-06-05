@@ -192,7 +192,7 @@
 			</div>
 
 			<div class="RadioDivIngBand">
-				<label>¿Desea ingresar otro contacto de la banda?</label>
+				<label>&#191;Desea ingresar otro contacto de la banda?</label>
 				<input type="radio" name="otrocontacto" class="otrocontacto" value="no" checked="checked"><label for="otrocontacto">NO</label>
 				<input type="radio" name="otrocontacto" class="otrocontacto" value="si"><label for="otrocontacto">SI</label>
 			</div>

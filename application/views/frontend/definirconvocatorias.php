@@ -3,7 +3,7 @@
 		<table class="tabladefinirconvocatorias">
 			<thead>
 				<th>Banda</th>
-				<th>Información</th>
+				<th>Informaci&oacute;n</th>
 				<th>Turno</th>
 			</thead>
 			<tbody>
@@ -13,7 +13,7 @@
 
 				<tr id="<?= $val->id ?>">
 					<td><?= $val->nombre ?></td>
-					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Información</a></td>
+					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Informaci&oacute;n</a></td>
 					<td>
 						<input type="radio" name="defconvocatoria<?= $val->id ?>" value="1" checked><span>A definir</span>
 						<input type="radio" name="defconvocatoria<?= $val->id ?>" value="2"><span>Primer turno</span>

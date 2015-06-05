@@ -822,7 +822,7 @@ input,textarea,select{
   display: block;
 }
 
-.busc input, .ing input, .mod input, #registrobanda input[type="submit"], .confirmarestadobanda{
+.busc input, .ing input, .mod input, #registrobanda input[type="submit"], .confirmarestadobanda {
   background-color: transparent;
   color: #804200;
   border: 0;
@@ -1928,7 +1928,9 @@ input#userfile{
 
 
 
-
+.tabladefinirturnos input[type="radio"], .tabladefinirconvocatorias input[type="radio"]{
+  margin: 8px;
+}
 
 
 

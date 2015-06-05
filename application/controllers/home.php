@@ -502,7 +502,7 @@ class Home extends CI_Controller {
 		$datos["genero"] = $this->info_model->genero();
 		$datos["paises"] = $this->info_model->paises();
 		$datos["provincia"] = $this->info_model->provincia();
-		$datos["titulo"]="Registrá tu banda";
+		$datos["titulo"]="Registra tu banda";
 		if($this->session->userdata('logueado')){
 			$this->load->view("templates/frontend/header2.php",$datos);	
 		}else{

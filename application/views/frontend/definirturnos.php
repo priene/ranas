@@ -3,7 +3,7 @@
 		<table class="tabladefinirturnos">
 			<thead>
 				<th>Banda</th>
-				<th>Información</th>
+				<th>Informaci&oacute;n</th>
 				<th>Turno</th>
 			</thead>
 			<tbody>
@@ -13,7 +13,7 @@
 
 				<tr id="<?= $val->id ?>">
 					<td><?= $val->nombre ?></td>
-					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Información</a></td>
+					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Informaci&oacute;n</a></td>
 					<td>
 						<input type="radio" name="defturno<?= $val->id ?>" value="1" checked><span>A definir</span>
 						<input type="radio" name="defturno<?= $val->id ?>" value="2"><span>Primer turno</span>
@@ -30,7 +30,7 @@
 		</table>
 		<a href="<?= site_url('validar_definirturnos'); ?>" id="eb2" class="confirmarestadobanda">Confirmar turnos</a>
 		<div class="msjinsertar"></div>
-		<div class="repetir"><a href="<?= site_url('definirturnos') ?>">Definir más turnos</a></div>
+		<div class="repetir"><a href="<?= site_url('definirturnos') ?>">Definir m&aacute;s turnos</a></div>
 		<div id="dialog-confirm2">
 			<div class="respuesta">
 				<div class="dialognombre"><label>Nombre: </label><p></p></div>

@@ -7,7 +7,7 @@
 			<thead>
 				<th><input type="checkbox" name="todos"></th>
 				<th>Banda</th>
-				<th>Información</th>
+				<th>Informaci&oacute;n</th>
 				<th>Borrar</th>
 			</thead>
 			<tbody>
@@ -18,7 +18,7 @@
 				<tr id="<?= $val->id ?>">
 					<td><input type="checkbox" name="checkbanda"></td>
 					<td><?= $val->nombre ?></td>
-					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Información</a></td>
+					<td><a class="verinfo" href="verinfo_banda/<?= $val->id ?>">Informaci&oacute;n</a></td>
 					<td><a class="elim" href="home/eliminar/banda/<?= $val->id ?>">Borrar</a></td>
 				</tr>
 
